@@ -77,6 +77,7 @@
             this.btnAttempted = new System.Windows.Forms.Button();
             this.btnAggravated = new System.Windows.Forms.Button();
             this.btnGovEmployee = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.txtSuspPhone = new System.Windows.Forms.TextBox();
             this.tabImpoundReport = new System.Windows.Forms.TabPage();
             this.tblImpoundReport = new System.Windows.Forms.TableLayoutPanel();
@@ -92,6 +93,7 @@
             this.btnGenImpoundReport = new System.Windows.Forms.Button();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtTimestamp = new System.Windows.Forms.TextBox();
+            this.txtVehDetails = new System.Windows.Forms.TextBox();
             this.tabImpoundRelease = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtRelOfficer = new System.Windows.Forms.TextBox();
@@ -111,8 +113,6 @@
             this.dtWatchEnd = new System.Windows.Forms.DateTimePicker();
             this.numArrests = new System.Windows.Forms.NumericUpDown();
             this.numCitations = new System.Windows.Forms.NumericUpDown();
-            this.txtVehDetails = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             lblImpoundReason = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             lblLocation = new System.Windows.Forms.Label();
@@ -531,6 +531,18 @@
             label3.Text = "Timestamp Converter:";
             label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label10
+            // 
+            label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(25, 130);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(80, 26);
+            label10.TabIndex = 24;
+            label10.Text = "Vehicle Details:";
+            label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabArrestReport);
@@ -612,10 +624,13 @@
             // 
             // txtSuspect
             // 
+            this.txtSuspect.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtSuspect.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSuspect.Location = new System.Drawing.Point(108, 3);
             this.txtSuspect.Name = "txtSuspect";
             this.txtSuspect.Size = new System.Drawing.Size(331, 20);
             this.txtSuspect.TabIndex = 1;
+            this.txtSuspect.TextChanged += new System.EventHandler(this.Suspect_TextChanged);
             // 
             // btnGenArrestReport
             // 
@@ -742,13 +757,26 @@
             this.btnGovEmployee.UseVisualStyleBackColor = true;
             this.btnGovEmployee.Click += new System.EventHandler(this.btnChargeModifier_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.label16, 4);
+            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(94, 13);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Crime Search Box:";
+            // 
             // txtSuspPhone
             // 
+            this.txtSuspPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtSuspPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSuspPhone.Location = new System.Drawing.Point(108, 29);
             this.txtSuspPhone.MaxLength = 7;
             this.txtSuspPhone.Name = "txtSuspPhone";
             this.txtSuspPhone.Size = new System.Drawing.Size(331, 20);
             this.txtSuspPhone.TabIndex = 2;
+            this.txtSuspPhone.TextChanged += new System.EventHandler(this.Phone_TextChanged);
             this.txtSuspPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuspPhone_KeyPress);
             // 
             // tabImpoundReport
@@ -861,10 +889,13 @@
             // 
             // txtVehOwner
             // 
+            this.txtVehOwner.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtVehOwner.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtVehOwner.Location = new System.Drawing.Point(111, 3);
             this.txtVehOwner.Name = "txtVehOwner";
             this.txtVehOwner.Size = new System.Drawing.Size(247, 20);
             this.txtVehOwner.TabIndex = 1;
+            this.txtVehOwner.TextChanged += new System.EventHandler(this.Suspect_TextChanged);
             // 
             // dtImpoundTime
             // 
@@ -899,11 +930,14 @@
             // 
             // txtPhoneNumber
             // 
+            this.txtPhoneNumber.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPhoneNumber.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPhoneNumber.Location = new System.Drawing.Point(111, 29);
             this.txtPhoneNumber.MaxLength = 7;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(247, 20);
             this.txtPhoneNumber.TabIndex = 2;
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.Phone_TextChanged);
             this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuspPhone_KeyPress);
             // 
             // txtTimestamp
@@ -914,6 +948,13 @@
             this.txtTimestamp.TabIndex = 23;
             this.txtTimestamp.TextChanged += new System.EventHandler(this.txtTimestamp_TextChanged);
             this.txtTimestamp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuspPhone_KeyPress);
+            // 
+            // txtVehDetails
+            // 
+            this.txtVehDetails.Location = new System.Drawing.Point(111, 133);
+            this.txtVehDetails.Name = "txtVehDetails";
+            this.txtVehDetails.Size = new System.Drawing.Size(247, 20);
+            this.txtVehDetails.TabIndex = 6;
             // 
             // tabImpoundRelease
             // 
@@ -996,10 +1037,13 @@
             // 
             // txtRelVehOwner
             // 
+            this.txtRelVehOwner.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtRelVehOwner.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtRelVehOwner.Location = new System.Drawing.Point(108, 3);
             this.txtRelVehOwner.Name = "txtRelVehOwner";
             this.txtRelVehOwner.Size = new System.Drawing.Size(247, 20);
             this.txtRelVehOwner.TabIndex = 1;
+            this.txtRelVehOwner.TextChanged += new System.EventHandler(this.Suspect_TextChanged);
             // 
             // txtRelDate
             // 
@@ -1033,11 +1077,14 @@
             // 
             // txtRelPhoneNum
             // 
+            this.txtRelPhoneNum.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtRelPhoneNum.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtRelPhoneNum.Location = new System.Drawing.Point(108, 29);
             this.txtRelPhoneNum.MaxLength = 7;
             this.txtRelPhoneNum.Name = "txtRelPhoneNum";
             this.txtRelPhoneNum.Size = new System.Drawing.Size(247, 20);
             this.txtRelPhoneNum.TabIndex = 2;
+            this.txtRelPhoneNum.TextChanged += new System.EventHandler(this.Phone_TextChanged);
             // 
             // tabDutyReport
             // 
@@ -1142,35 +1189,6 @@
             this.numCitations.Name = "numCitations";
             this.numCitations.Size = new System.Drawing.Size(120, 20);
             this.numCitations.TabIndex = 4;
-            // 
-            // label10
-            // 
-            label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(25, 130);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(80, 26);
-            label10.TabIndex = 24;
-            label10.Text = "Vehicle Details:";
-            label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtVehDetails
-            // 
-            this.txtVehDetails.Location = new System.Drawing.Point(111, 133);
-            this.txtVehDetails.Name = "txtVehDetails";
-            this.txtVehDetails.Size = new System.Drawing.Size(247, 20);
-            this.txtVehDetails.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.label16, 4);
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 13);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Crime Search Box:";
             // 
             // LSPDPMainForm
             // 

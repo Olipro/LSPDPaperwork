@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LSPD_Paperwork
 {
@@ -24,9 +20,19 @@ namespace LSPD_Paperwork
             this.prefix = prefix + this.prefix;
         }
 
+        public void DelPrefix(string prefix)
+        {
+            this.prefix = this.prefix.Replace(prefix, "");
+        }
+
         public void AddSuffix(string suffix)
         {
             this.suffix += suffix;
+        }
+
+        public void DelSuffix(string suffix)
+        {
+            this.suffix = this.suffix.Replace(suffix, "");
         }
 
         public override string ToString()

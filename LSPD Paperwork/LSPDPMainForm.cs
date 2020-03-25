@@ -11,8 +11,10 @@ namespace LSPD_Paperwork
     {
         private static readonly string CRIMES_FILE = "Crimes.txt";
         private static readonly string VEHICLES_FILE = "Vehicles.txt";
+        private static readonly string SUSPECTS_FILE = "Suspects.txt";
 
         private CrimeList crimeList = new CrimeList(File.OpenRead(CRIMES_FILE));
+        private SuspectManager suspMgr = new SuspectManager(File.Open(SUSPECTS_FILE, FileMode.OpenOrCreate));
         private Dictionary<object, string> btnDict = new Dictionary<object, string>();
         public LSPDPMainForm()
         {
@@ -29,6 +31,13 @@ namespace LSPD_Paperwork
             btnDict.Add(btnAccessory, "Accessory to ");
             btnDict.Add(btnAggravated, "Aggravated ");
             btnDict.Add(btnGovEmployee, " Against a Government Employee");
+
+            txtSuspect.AutoCompleteCustomSource = suspMgr.SuspNames;
+            txtVehOwner.AutoCompleteCustomSource = suspMgr.SuspNames;
+            txtRelVehOwner.AutoCompleteCustomSource = suspMgr.SuspNames;
+            txtSuspPhone.AutoCompleteCustomSource = suspMgr.SuspPhnes;
+            txtPhoneNumber.AutoCompleteCustomSource = suspMgr.SuspPhnes;
+            txtRelPhoneNum.AutoCompleteCustomSource = suspMgr.SuspPhnes;
         }
 
         private void ResetCrimes()
@@ -75,6 +84,7 @@ namespace LSPD_Paperwork
                                                   txtReason.Text,
                                                   txtOfficersInvolved.Text,
                                                   txtScreenshot.Text));
+            suspMgr.AddSuspect(new Suspect(txtVehOwner.Text, txtPhoneNumber.Text));
         }
         private void btnGenReleaseReport_Click(object sender, EventArgs e)
         {
@@ -90,6 +100,7 @@ namespace LSPD_Paperwork
                                                          txtRelDate.Value,
                                                          txtRelOfficer.Text,
                                                          txtRelFee.Text));
+            suspMgr.AddSuspect(new Suspect(txtRelVehOwner.Text, txtRelPhoneNum.Text));
         }
 
         private void btnGenArrestReport_Click(object sender, EventArgs e)
@@ -102,6 +113,7 @@ namespace LSPD_Paperwork
                                                 txtMugshot.Text,
                                                 chkCrimes.CheckedItems.Cast<Crime>(),
                                                 txtNarrative.Text));
+            suspMgr.AddSuspect(new Suspect(txtSuspect.Text, txtSuspPhone.Text));
         }
 
         private void btnGenDutyReport_Click(object sender, EventArgs e)
@@ -182,12 +194,21 @@ namespace LSPD_Paperwork
                 return;
             var idx = chkCrimes.SelectedIndex;
             var crime = (Crime)chkCrimes.Items[idx];
-            if ((append && crime.Suffix().Contains(extra)) || (!append && crime.Prefix().Contains(extra)))
-                return;
+            Action<string> func;
             if (append)
-                crime.AddSuffix(extra);
-            else
-                crime.AddPrefix(extra);
+            {
+                if (crime.Suffix().Contains(extra))
+                    func = crime.DelSuffix;
+                else
+                    func = crime.AddSuffix;
+            } else
+            {
+                if (crime.Prefix().Contains(extra))
+                    func = crime.DelPrefix;
+                else
+                    func = crime.AddPrefix;
+            }
+            func(extra);
             chkCrimes.Items[idx] = crime;
         }
 
@@ -201,6 +222,28 @@ namespace LSPD_Paperwork
         private void txtSuspPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = (e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != '\b';
+        }
+
+        private void Suspect_TextChanged(object sender, EventArgs e)
+        {
+            var txtBox = (TextBox)sender;
+            var phone = (TextBox)txtBox.Parent.GetNextControl(txtBox, true);
+            if (phone.TextLength != 0)
+                return;
+            var susp = suspMgr.FindFromName(txtBox.Text);
+            if (susp != null)
+                phone.Text = susp.Phone;
+        }
+
+        private void Phone_TextChanged(object sender, EventArgs e)
+        {
+            var txtBox = (TextBox)sender;
+            var name = (TextBox)txtBox.Parent.GetNextControl(txtBox, false);
+            if (name.TextLength != 0)
+                return;
+            var susp = suspMgr.FindFromPhone(txtBox.Text);
+            if (susp != null)
+                name.Text = susp.Name;
         }
     }
 }
