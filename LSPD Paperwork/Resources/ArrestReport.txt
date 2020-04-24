@@ -1,0 +1,28 @@
+[img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white][img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+[size=150]Los Santos Police Department[/size][/b]
+[size=115]ARREST REPORT[/size]
+[size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
+
+[float=right][b][size=115]MUGSHOT[/size][/b][/float][list=none][b][size=115]SUSPECT DETAILS[/size][/b]
+[list=none] [float=right] [fimg=200,185]__mugshot__[/fimg] [/float]
+
+[b]Full Name:[/b] __suspect__
+[b]Phone Number:[/b] __phone__
+[b]Licenses Revoked:[/b] __licensesRevoked__
+[b]Officers Involved:[/b] [list]
+__officers:Alex Tanner
+__
+[/list]
+
+[b]Charges:[/b] [list]
+__charges__
+[/list]
+[/list]
+
+[b][size=115]NARRATIVE[/size][/b]
+[list=none]
+[list=none]
+__narrative__
+
+
+[/list][/list][/list][/divbox][img]https://i.imgur.com/88vzzHs.jpg[/img]

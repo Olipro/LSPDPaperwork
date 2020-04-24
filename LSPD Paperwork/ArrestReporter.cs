@@ -1,12 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.IO;
 
-namespace LSPD_Paperwork
+namespace LSPDPaperwork
 {
-    public class ArrestReporter : IReporter
+    public class ArrestReporter : VersionedFileData, IReporter
     {
-        public static readonly string TEMPLATE = "ArrestReport.txt";
-        private IReportTemplateParser parser;
+        public const string TEMPLATE = "ArrestReport.txt";
+        private readonly IReportTemplateParser parser;
+
+        public ArrestReporter() : base(TEMPLATE, Properties.Resources.ArrestReport)
+        {
+            using (var file = File.OpenRead(TEMPLATE))
+                parser = new ReportTemplateParser(file);
+        }
         
         public ArrestReporter(string suspect,
                               string phone,
@@ -14,10 +21,11 @@ namespace LSPD_Paperwork
                               string[] officers,
                               string mugshot,
                               IEnumerable<Crime> crimes,
-                              string narrative)
+                              string narrative) : this()
         {
-            using (var file = File.OpenRead(TEMPLATE))
-                parser = new ReportTemplateParser(file);
+            Contract.Requires(officers != null);
+            Contract.Requires(crimes != null);
+            
             parser.SetValue("suspect", suspect);
             parser.SetValue("phone", phone);
             parser.SetValue("licensesRevoked", licensesRevoked ? "Yes" : "No");
@@ -33,6 +41,11 @@ namespace LSPD_Paperwork
                 chargesStr += "[*]" + crime.ToString() + '\n';
             chargesStr = chargesStr.TrimEnd(new char[]{ '\r', '\n' });
             parser.SetValue("charges", chargesStr);
+        }
+
+        public string GetPrefill()
+        {
+            return parser.GetPrefill("officers");
         }
 
         public string GetReport()

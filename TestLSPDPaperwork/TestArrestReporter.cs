@@ -1,14 +1,31 @@
-﻿using System;
+﻿using LSPDPaperwork;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.IO;
-using LSPD_Paperwork;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestLSPDPaperwork
 {
     [TestClass]
     public class TestArrestReporter
     {
+        public interface IT
+        {
+            bool T();
+        }
+        public class X : IT
+        {
+            public virtual bool T()
+            {
+                return true;
+            }
+        }
+        public class Y : X
+        {
+            public new bool T()
+            {
+                return false;
+            }
+        }
         [TestMethod]
         public void ArrestReporterSuccessfullyProcessesData()
         {

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LSPD_Paperwork
+namespace LSPDPaperwork
 {
     static class Program
     {
@@ -16,7 +13,8 @@ namespace LSPD_Paperwork
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LSPDPMainForm());
+            using (var form = new LSPDPMainForm())
+                Application.Run(form);
         }
     }
 }

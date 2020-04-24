@@ -1,0 +1,32 @@
+[img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+[size=150]Los Santos Police Department[/size][/b]
+[size=115]IMPOUND REPORT[/size]
+[size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
+[hr]
+[list=none][b][size=115]VEHICLE DETAILS[/size][/b]
+[list=none]
+[b]Vehicle Owner:[/b] __vehOwner__
+[b]Phone Number:[/b] __phoneNum__
+[b]License Plate:[/b] __license__
+[b]Vehicle Model:[/b] __model__
+[b]Vehicle Color:[/b] __color__
+[b]Miscelleanous Details:[/b] __details__
+[/list]
+
+[b][size=115]IMPOUND DETAILS[/size][/b]
+[list=none]
+[b]Date and Time:[/b] __impoundTime__
+[b]Location:[/b] __location__
+[b]Brief Statement of Impounding Reason:[/b] __reason__
+[b]Officers Involved:[/b]
+__officers:Alex Tanner
+__
+[b]Documented Evidence:[/b]
+[img]__screenshot__[/img]
+[/list][/list]
+
+
+[hr][/hr]
+[/divbox]
+[img]https://i.imgur.com/88vzzHs.jpg[/img]

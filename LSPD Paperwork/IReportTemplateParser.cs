@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace LSPD_Paperwork
+namespace LSPDPaperwork
 {
     interface IReportTemplateParser
     {
         void SetValue(string key, string value);
-
+        string GetPrefill(string name);
+        IDictionary<string, string> GetAllPrefills();
         string Parse();
     }
 }

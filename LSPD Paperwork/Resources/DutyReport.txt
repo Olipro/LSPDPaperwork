@@ -1,0 +1,16 @@
+[img]https://i.imgur.com/afzUoXM.png[/img]
+
+[divbox=white]
+[b]Date:[/b] __date__
+[b]Hours on Duty: [/b] __dutyHours__
+[b]Start of watch: [/b] __watchStart__
+
+[b]Arrests:[/b] __arrests__
+[b]Citations:[/b] __citations__
+
+[b]Notes:[/b]
+__notes:My Default Content
+
+__
+
+[/divbox]

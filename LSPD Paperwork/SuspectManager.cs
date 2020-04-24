@@ -1,71 +1,104 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using System.Globalization;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
-namespace LSPD_Paperwork
+namespace LSPDPaperwork
 {
-    class SuspectManager
+    public class SuspectManager : IDisposable
     {
-        private List<Suspect> suspects = new List<Suspect>();
-        private Stream dbFile;
-        private StreamReader dbRd;
+        public const string TEMPLATE = "Suspects.txt";
+        private static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");
 
-        public SuspectManager(Stream dbFile)
+        private readonly ISet<Suspect> suspects = new HashSet<Suspect>();
+        private readonly IDictionary<string, Suspect> suspectsByName = new Dictionary<string, Suspect>();
+        private readonly IDictionary<string, Suspect> suspectsByPhone = new Dictionary<string, Suspect>();
+        private Stream dbFile;
+
+        public SuspectManager()
         {
-            this.dbFile = dbFile;
-            dbRd = new StreamReader(dbFile);
-            while (!dbRd.EndOfStream)
-            {
-                var suspStr = dbRd.ReadLine().Split(new char[] { '_', '_' });
-                var susp = new Suspect(suspStr[0], suspStr[2]);
-                suspects.Add(susp);
-                SuspNames.Add(susp.Name);
-                SuspPhnes.Add(susp.Phone);
-            }
+            dbFile = File.Open(TEMPLATE, FileMode.OpenOrCreate);
+            using (var dbRd = new StreamReader(dbFile, Encoding.UTF8, false, 128, true))
+                while (!dbRd.EndOfStream)
+                {
+                    var suspStr = dbRd.ReadLine().Split(new string[] { "__" }, StringSplitOptions.None);
+                    AddSuspect(new Suspect(suspStr[0], suspStr[1]));
+                }
         }
 
-        public IEnumerable<Suspect> Suspects { get => suspects; }
+        public ICollection<Suspect> Suspects { get => suspects; }
         public AutoCompleteStringCollection SuspNames { get; } = new AutoCompleteStringCollection();
         public AutoCompleteStringCollection SuspPhnes { get; } = new AutoCompleteStringCollection();
 
         public void AddSuspect(Suspect suspect)
         {
+            Contract.Assert(suspect != null);
             if (suspect.Name.Length == 0 || suspect.Phone.Length != 7)
                 return;
-            var existingSusp = FindFromName(suspect.Name);
-            if (existingSusp != null)
+            RemoveAllMatching(suspect);
+            suspects.Add(suspect);
+            suspectsByName.Add(suspect.Name.ToLower(enUS), suspect);
+            suspectsByPhone.Add(suspect.Phone, suspect);
+            SuspNames.Add(suspect.Name);
+            SuspPhnes.Add(suspect.Phone);
+        }
+
+        private void RemoveSuspect(Suspect susp)
+        {
+            if (susp != null)
             {
-                SuspPhnes.Remove(existingSusp.Phone);
-                existingSusp.Phone = suspect.Phone;
-                SuspPhnes.Add(existingSusp.Phone);
+                suspects.Remove(susp);
+                suspectsByName.Remove(susp.Name.ToLower(enUS));
+                suspectsByPhone.Remove(susp.Phone);
+                SuspNames.Remove(susp.Name);
+                SuspPhnes.Remove(susp.Phone);
             }
-            else
-            {
-                suspects.Add(suspect);
-                SuspNames.Add(suspect.Name);
-                SuspPhnes.Add(suspect.Phone);
-            }
+        }
+
+        private void RemoveAllMatching(Suspect susp)
+        {
+            RemoveSuspect(FindFromName(susp.Name));
+            RemoveSuspect(FindFromPhone(susp.Phone));
         }
 
         public Suspect FindFromName(string name)
         {
-            return suspects.Find(susp => susp.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            Contract.Assert(name != null);
+            suspectsByName.TryGetValue(name.ToLower(enUS), out Suspect ret);
+            return ret;
         }
 
         public Suspect FindFromPhone(string phone)
         {
-            return suspects.Find(susp => susp.Phone.Equals(phone));
+            suspectsByPhone.TryGetValue(phone, out Suspect ret);
+            return ret;
+        }
+        
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
-        ~SuspectManager()
+        protected virtual void Dispose(bool disposing)
         {
+            if (!disposing || dbFile == null)
+                return;
             dbFile.SetLength(0);
             dbFile.Seek(0, SeekOrigin.Begin);
             using (var dbWr = new StreamWriter(dbFile))
                 foreach (var suspect in suspects)
                     dbWr.WriteLine(suspect);
             dbFile.Close();
+            dbFile = null;
+        }
+        
+        ~SuspectManager()
+        {
+            Dispose(false);
         }
     }
 }

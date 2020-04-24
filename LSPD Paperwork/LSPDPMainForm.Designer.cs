@@ -1,4 +1,4 @@
-﻿namespace LSPD_Paperwork
+﻿namespace LSPDPaperwork
 {
     partial class LSPDPMainForm
     {
@@ -13,9 +13,11 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing)
             {
-                components.Dispose();
+                suspMgr.Dispose();
+                if (components != null)
+                    components.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -643,7 +645,7 @@
             this.btnGenArrestReport.TabIndex = 8;
             this.btnGenArrestReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenArrestReport.UseVisualStyleBackColor = true;
-            this.btnGenArrestReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnGenArrestReport_MouseUp);
+            this.btnGenArrestReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenArrestReport_MouseUp);
             // 
             // txtNarrative
             // 
@@ -708,7 +710,7 @@
             this.txtSuggestCharge.Name = "txtSuggestCharge";
             this.txtSuggestCharge.Size = new System.Drawing.Size(329, 20);
             this.txtSuggestCharge.TabIndex = 1;
-            this.txtSuggestCharge.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSuggestCharge_KeyUp);
+            this.txtSuggestCharge.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSuggestCharge_KeyUp);
             // 
             // btnAccessory
             // 
@@ -720,7 +722,7 @@
             this.btnAccessory.TabStop = false;
             this.btnAccessory.Text = "Accessory";
             this.btnAccessory.UseVisualStyleBackColor = true;
-            this.btnAccessory.Click += new System.EventHandler(this.btnChargeModifier_Click);
+            this.btnAccessory.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // btnAttempted
             // 
@@ -731,7 +733,7 @@
             this.btnAttempted.TabStop = false;
             this.btnAttempted.Text = "Attempted";
             this.btnAttempted.UseVisualStyleBackColor = true;
-            this.btnAttempted.Click += new System.EventHandler(this.btnChargeModifier_Click);
+            this.btnAttempted.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // btnAggravated
             // 
@@ -743,7 +745,7 @@
             this.btnAggravated.TabStop = false;
             this.btnAggravated.Text = "Aggravated";
             this.btnAggravated.UseVisualStyleBackColor = true;
-            this.btnAggravated.Click += new System.EventHandler(this.btnChargeModifier_Click);
+            this.btnAggravated.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // btnGovEmployee
             // 
@@ -755,7 +757,7 @@
             this.btnGovEmployee.TabStop = false;
             this.btnGovEmployee.Text = "Gov. Employee";
             this.btnGovEmployee.UseVisualStyleBackColor = true;
-            this.btnGovEmployee.Click += new System.EventHandler(this.btnChargeModifier_Click);
+            this.btnGovEmployee.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // label16
             // 
@@ -777,7 +779,7 @@
             this.txtSuspPhone.Size = new System.Drawing.Size(331, 20);
             this.txtSuspPhone.TabIndex = 2;
             this.txtSuspPhone.TextChanged += new System.EventHandler(this.Phone_TextChanged);
-            this.txtSuspPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuspPhone_KeyPress);
+            this.txtSuspPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSuspPhone_KeyPress);
             // 
             // tabImpoundReport
             // 
@@ -873,7 +875,7 @@
             // 
             // txtVehModel
             // 
-            this.txtVehModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtVehModel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtVehModel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtVehModel.Location = new System.Drawing.Point(111, 81);
             this.txtVehModel.Name = "txtVehModel";
@@ -926,7 +928,7 @@
             this.btnGenImpoundReport.TabIndex = 11;
             this.btnGenImpoundReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenImpoundReport.UseVisualStyleBackColor = true;
-            this.btnGenImpoundReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnGenImpoundReport_MouseUp);
+            this.btnGenImpoundReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenImpoundReport_MouseUp);
             // 
             // txtPhoneNumber
             // 
@@ -938,7 +940,7 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(247, 20);
             this.txtPhoneNumber.TabIndex = 2;
             this.txtPhoneNumber.TextChanged += new System.EventHandler(this.Phone_TextChanged);
-            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuspPhone_KeyPress);
+            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSuspPhone_KeyPress);
             // 
             // txtTimestamp
             // 
@@ -946,8 +948,8 @@
             this.txtTimestamp.Name = "txtTimestamp";
             this.txtTimestamp.Size = new System.Drawing.Size(165, 20);
             this.txtTimestamp.TabIndex = 23;
-            this.txtTimestamp.TextChanged += new System.EventHandler(this.txtTimestamp_TextChanged);
-            this.txtTimestamp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuspPhone_KeyPress);
+            this.txtTimestamp.TextChanged += new System.EventHandler(this.TxtTimestamp_TextChanged);
+            this.txtTimestamp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSuspPhone_KeyPress);
             // 
             // txtVehDetails
             // 
@@ -1065,7 +1067,7 @@
             this.btnGenReleaseReport.TabIndex = 9;
             this.btnGenReleaseReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenReleaseReport.UseVisualStyleBackColor = true;
-            this.btnGenReleaseReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnGenReleaseReport_MouseUp);
+            this.btnGenReleaseReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenReleaseReport_MouseUp);
             // 
             // txtRelFee
             // 
@@ -1073,7 +1075,7 @@
             this.txtRelFee.Name = "txtRelFee";
             this.txtRelFee.Size = new System.Drawing.Size(247, 20);
             this.txtRelFee.TabIndex = 8;
-            this.txtRelFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRelFee_KeyPress);
+            this.txtRelFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRelFee_KeyPress);
             // 
             // txtRelPhoneNum
             // 
@@ -1146,14 +1148,16 @@
             this.btnGenDutyReport.TabIndex = 6;
             this.btnGenDutyReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenDutyReport.UseVisualStyleBackColor = true;
-            this.btnGenDutyReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnGenDutyReport_MouseUp);
+            this.btnGenDutyReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenDutyReport_MouseUp);
             // 
             // txtNotes
             // 
             this.txtNotes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNotes.Location = new System.Drawing.Point(88, 107);
+            this.txtNotes.MaxLength = 65535;
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
+            this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtNotes.Size = new System.Drawing.Size(695, 304);
             this.txtNotes.TabIndex = 5;
             // 

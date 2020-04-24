@@ -1,0 +1,91 @@
+GM01__Assault
+GM02__Battery
+GM03__Possession of a Blade
+GM04__Resisting Arrest
+GM05__Receiving Stolen Property
+GM06__Petty Theft
+GM07__Possession of a Fake Operator License or ID Card
+GM08__Identity Theft
+GM09__Vandalism
+GM10__Vigilantism
+GM11__Failure to Comply / Identify
+GM12__Predatory Lending
+GM13__Giving False Information to a Police Officer
+GM14__Criminal Threats
+GM15__Obstruction of Justice
+GM16__Animal Cruelty
+GM17__Failure to Pay a Fine
+GM18__Bribery
+GM19__Failure to Report the Finding of a Dead Human Body
+GM20__Face Concealment
+GM21__Sales Tax Evasion
+NM01__Inciting a Riot
+NM02__Participating in a Riot
+NM03__Unlawful Assembly
+NM04__Disturbing the Peace
+NM05__Indecent Exposure
+NM06__Stalking
+NM07__Public Intoxication
+NM08__Trespassing
+NM09__Prostitution
+NM10__Loitering with Intent to Commit Prostitution
+NM11__Misuse of Government Public Safety Radio Frequencies or Hotlines
+VM01__Operating a Vehicle without a Valid License
+VM02__Operating a Vehicle with a Suspended License
+VM03__Reckless Operation of a Road or Marine Vehicle
+VM04__Impeding Traffic
+VM05__Drunk, Impaired or Distracted Driving
+VM06__Street Competition
+VF01__Felony Evading
+VF02__Felony Hit and Run
+VF03__Operating a "Chop Shop"
+VF05__Felony Public Endangerment
+VF06__Vehicular Manslaughter
+VF07__Reckless Operation of an Aircraft
+DM01__Controlled Substance Possession
+DM02__Possession of a Controlled Substance While Armed
+DF01__Illegal Drug Possession with Intent of Sales
+DF02__Sale of Illegal Drugs
+DF04__Manufacturing Narcotics
+DF05__Drug Trafficking
+WM01__Brandishing a Firearm or Weapon
+WM02__Carrying an Unlicensed Firearm or Weapon
+WM03__Possession of Weapon Modifications
+WM04__Possession of Body Armor as a Felon
+WM05__Possession of a Firearm while Intoxicated
+WF01__Assault with a Deadly Weapon
+WF02__Shooting from a Vehicle (Drive-By)
+WF03__Possession of Illegal Firearms/Weapons
+WF04__Illegal Sale of an Unlicensed Firearm/Ammunition
+WF05__Sale of Illegal Firearms/Ammunition
+WF06__Firearms Trafficking
+GF01__Child Endangerment
+GF02__Robbery
+GF03__Armed Robbery
+GF04__Sexual Assault
+GF05__Extortion
+GF06__Blackmail
+GF07__Fraud
+GF08__Illegal Gambling
+GF09__Embezzlement
+GF10__Grand Theft
+GF11__Grand Theft Auto
+GF12__Forgery or Counterfeiting
+GF13__Arson
+GF14__False Impersonation
+GF15__Burglary
+GF16__Tampering with Evidence
+GF17__Rape
+GF18__Racketeering
+GF19__Abuse or Desecration of a Dead Human Body
+GF20__Possession of Human Body Tissue
+GF21__Prison Break
+GF22__Parole Violation
+SF01__Domestic Terrorism
+SF02__Murder
+SF03__Involuntary Manslaughter
+SF04__Kidnapping
+SF05__Torture
+SF06__Possessing Destructive Devices or Explosives
+SF07__Bank Robbery
+SF08__Human Trafficking

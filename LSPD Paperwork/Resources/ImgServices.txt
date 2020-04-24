@@ -1,0 +1,4 @@
+imgur.com
+gyazo.com
+cdn.discordapp.com
+dl.dropboxusercontent.com

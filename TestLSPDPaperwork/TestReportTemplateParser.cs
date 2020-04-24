@@ -1,6 +1,6 @@
-﻿using System.IO;
-using LSPD_Paperwork;
+﻿using LSPDPaperwork;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 namespace TestLSPDPaperwork
 {
@@ -14,6 +14,27 @@ namespace TestLSPDPaperwork
             parser.SetValue("name", "john");
             parser.SetValue("this", "here");
             Assert.IsTrue("Hello john, you are here".Equals(parser.Parse()));
+        }
+
+        [TestMethod]
+        public void ReportTemplateParserCorrectlyExtractsPrefilledInputAndReplacesIt()
+        {
+            var parser = new ReportTemplateParser(new StringReader("Hello__ThisIsALongVariable__ __name:This is prefill___"));
+            var prefill = parser.GetPrefill("name");
+            Assert.AreEqual("This is prefill", prefill);
+            parser.SetValue("ThisIsALongVariable", "asdf");
+            parser.SetValue("name", prefill + ".");
+            Assert.AreEqual("Helloasdf This is prefill.", parser.Parse());
+        }
+
+        [TestMethod]
+        public void ReportTemplateParserFindsAllPrefilledVars()
+        {
+            var parser = new ReportTemplateParser(new StringReader("Hello __var__, __pre:filled____pre2:filled2__"));
+            var prefilled = parser.GetAllPrefills();
+            Assert.AreEqual(2, prefilled.Count);
+            Assert.AreEqual("filled", prefilled["pre"]);
+            Assert.AreEqual("filled2", prefilled["pre2"]);
         }
     }
 }

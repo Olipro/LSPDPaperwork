@@ -1,14 +1,15 @@
 ﻿using System.IO;
 using System.Windows.Forms;
 
-namespace LSPD_Paperwork
+namespace LSPDPaperwork
 {
-    class VehicleList
+    class VehicleList : VersionedFileData
     {
+        public const string TEMPLATE = "Vehicles.txt";
         private AutoCompleteStringCollection vehicles = new AutoCompleteStringCollection();
-        public VehicleList(Stream file)
+        public VehicleList() : base(TEMPLATE, Properties.Resources.Vehicles)
         {
-            using (file)
+            using (var file = File.OpenRead(TEMPLATE))
             using (var strm = new StreamReader(file)) {
                 while (!strm.EndOfStream)
                     vehicles.Add(strm.ReadLine());

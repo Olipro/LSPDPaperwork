@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LSPD_Paperwork.Properties
-{
-
-
+namespace LSPDPaperwork.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,218 @@ namespace LSPD_Paperwork.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LSPD_Paperwork.Properties.Resources", typeof(Resources).Assembly);
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LSPDPaperwork.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white][img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+        ///[size=150]Los Santos Police Department[/size][/b]
+        ///[size=115]ARREST REPORT[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///
+        ///[hr]--------------- REPLACE THE IMAGE BELOW THIS LINE WITH THE MUGSHOT OF THE SUSPECT --------------------[/hr]
+        ///
+        ///[float=right][b][size=115]MUGSHOT[/size][/b][/float][list=none][b][size=115]SUSPECT DETAILS[ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ArrestReport {
+            get {
+                return ResourceManager.GetString("ArrestReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GM01__Assault
+        ///GM02__Battery
+        ///GM03__Possession of a Blade
+        ///GM04__Resisting Arrest
+        ///GM05__Receiving Stolen Property
+        ///GM06__Petty Theft
+        ///GM07__Possession of a Fake Operator License or ID Card
+        ///GM08__Identity Theft
+        ///GM09__Vandalism
+        ///GM10__Vigilantism
+        ///GM11__Failure to Comply / Identify
+        ///GM12__Predatory Lending
+        ///GM13__Giving False Information to a Police Officer
+        ///GM14__Criminal Threats
+        ///GM15__Obstruction of Justice
+        ///GM16__Animal Cruelty
+        ///GM17__Failure to Pay a Fine
+        ///GM18__Bribery
+        ///GM19__Failure to Report the Fi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Crimes {
+            get {
+                return ResourceManager.GetString("Crimes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/afzUoXM.png[/img]
+        ///
+        ///[divbox=white]
+        ///[b]Date:[/b] __date__
+        ///[b]Hours on Duty: [/b] __dutyHours__
+        ///[b]Start of watch: [/b] __watchStart__
+        ///
+        ///[b]Arrests:[/b] __arrests__
+        ///[b]Citations:[/b] __citations__
+        ///
+        ///[b]Notes(Optional):[/b]
+        ///__notes__
+        ///
+        ///[/divbox].
+        /// </summary>
+        internal static string DutyReport {
+            get {
+                return ResourceManager.GetString("DutyReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to imgur.com
+        ///gyazo.com.
+        /// </summary>
+        internal static string ImgServices {
+            get {
+                return ResourceManager.GetString("ImgServices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+        ///[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+        ///[size=150]Los Santos Police Department[/size][/b]
+        ///[size=115]IMPOUND RELEASE REPORT[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///[hr]
+        ///[list=none][b][size=115]VEHICLE DETAILS[/size][/b]
+        ///[list=none]
+        ///[b]Vehicle Owner:[/b] __vehOwner__
+        ///[b]Phone Number:[/b] __phoneNum__
+        ///[b]License Plate:[/b] __license__
+        ///[b]Vehicle Model:[/b] [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImpoundRelease {
+            get {
+                return ResourceManager.GetString("ImpoundRelease", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+        ///[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+        ///[size=150]Los Santos Police Department[/size][/b]
+        ///[size=115]IMPOUND REPORT[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///[hr]
+        ///[list=none][b][size=115]VEHICLE DETAILS[/size][/b]
+        ///[list=none]
+        ///[b]Vehicle Owner:[/b] __vehOwner__
+        ///[b]Phone Number:[/b] __phoneNum__
+        ///[b]License Plate:[/b] __license__
+        ///[b]Vehicle Model:[/b] __model [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImpoundReport {
+            get {
+                return ResourceManager.GetString("ImpoundReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dinghy
+        ///Jetmax
+        ///Kraken
+        ///Marquis
+        ///Police Predator
+        ///Seashark
+        ///Speeder
+        ///Squalo
+        ///Submersible
+        ///Suntrap
+        ///Toro
+        ///Tropic
+        ///Tug
+        ///Benson
+        ///Biff
+        ///Cerberus
+        ///Hauler
+        ///Hauler Custom
+        ///Mule
+        ///Mule (Armored)
+        ///Mule Custom
+        ///Packer
+        ///Phantom
+        ///Phantom Custom
+        ///Phantom Wedge
+        ///Pounder
+        ///Pounder Custom
+        ///Stockade
+        ///Tanker
+        ///Terrorbyte
+        ///Trailer
+        ///Asbo
+        ///Blista
+        ///Blista Kanjo
+        ///Brioso R/A
+        ///Dilettante
+        ///Issi
+        ///Issi (Arena)
+        ///Issi Classic
+        ///Panto
+        ///Prairie
+        ///Rhapsody
+        ///Cognescenti Cabrio
+        ///Exemplar
+        ///F620
+        ///Felon
+        ///Felon GT
+        ///Jackal
+        ///Oracle
+        ///Oracle XS
+        ///Sentinel [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Vehicles {
+            get {
+                return ResourceManager.GetString("Vehicles", resourceCulture);
             }
         }
     }

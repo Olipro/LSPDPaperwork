@@ -1,7 +1,11 @@
-﻿namespace LSPD_Paperwork
+﻿using System;
+using System.Globalization;
+
+namespace LSPDPaperwork
 {
-    class Suspect
+    public class Suspect
     {
+        private static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");
         public Suspect(string name, string phone)
         {
             Name = name;
@@ -14,6 +18,16 @@
         public override string ToString()
         {
             return Name + "__" + Phone;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Suspect s ? (Name.Equals(s.Name, StringComparison.OrdinalIgnoreCase) && Phone.Equals(s.Phone, StringComparison.Ordinal)) : base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.ToLower(enUS).GetHashCode();
         }
     }
 }

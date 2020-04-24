@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace LSPD_Paperwork
+namespace LSPDPaperwork
 {
     public class Crime
     {
-        private string code;
-        private string description;
+        private readonly string code;
+        private readonly string description;
         private string prefix = "";
         private string suffix = "";
 
@@ -58,6 +58,16 @@ namespace LSPD_Paperwork
         public bool Equals(string desc)
         {
             return description.Equals(desc, StringComparison.OrdinalIgnoreCase) || ToString().Equals(desc, StringComparison.OrdinalIgnoreCase);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Crime c ? c.code.Equals(code, StringComparison.Ordinal) : base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return code.GetHashCode();
         }
 
         public void Reset()

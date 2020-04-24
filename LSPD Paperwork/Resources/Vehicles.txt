@@ -1,0 +1,587 @@
+Dinghy
+Jetmax
+Kraken
+Marquis
+Police Predator
+Seashark
+Speeder
+Squalo
+Submersible
+Suntrap
+Toro
+Tropic
+Tug
+Benson
+Biff
+Cerberus
+Hauler
+Hauler Custom
+Mule
+Mule (Armored)
+Mule Custom
+Packer
+Phantom
+Phantom Custom
+Phantom Wedge
+Pounder
+Pounder Custom
+Stockade
+Tanker
+Terrorbyte
+Trailer
+Asbo
+Blista
+Blista Kanjo
+Brioso R/A
+Dilettante
+Issi
+Issi (Arena)
+Issi Classic
+Panto
+Prairie
+Rhapsody
+Cognescenti Cabrio
+Exemplar
+F620
+Felon
+Felon GT
+Jackal
+Oracle
+Oracle XS
+Sentinel
+Sentinel XS
+Windsor
+Windsor Drop
+Zion
+Zion Cabrio
+BMX
+Cruiser
+Fixter
+Race Bike
+Scorcher
+Ambulance
+FIB
+FIB SUV
+Fire Truck
+Lifeguard
+Park Ranger
+Police Bike
+Police Cruiser (Buffalo)
+Police Cruiser (Interceptor)
+Police Cruiser (Stanier)
+Police Rancher
+Police Riot
+Police Roadcruiser
+Police Transporter
+Prison Bus
+RCV
+Sheriff Cruiser
+Sheriff SUV
+Unmarked Cruiser
+Akula
+Annihilator
+Buzzard
+Cargobob
+FH-1 Hunter
+Frogger
+Havok
+Maverick
+Police Maverick
+Savage
+Sea Sparrow
+Skylift
+SuperVolito
+Swift
+Swift Deluxe
+Valkyrie
+Volatus
+Cutter
+Dock Handler
+Dozer
+Dump
+Flatbed
+Guardian
+Mixer (6 Wheels)
+Mixer (8 Wheels)
+Rubble
+Tipper (4 Wheels)
+Tipper (6 Wheels)
+Anti-Aircraft Trailer
+APC
+Barracks
+Barracks Semi
+Barrage
+Chernobog
+Crusader
+Half-Track
+Invade and Persuade Tank
+Rhino Tank
+Scarab
+Thruster
+TM-02 Khanjali
+Akuma
+Avarus
+Bagger
+Bati 801
+BF400
+Carbon RS
+Chimera
+Cliffhanger
+Daemon
+Daemon (Lost)
+Deathbike
+Defiler
+Diabolus
+Diabolus Custom
+Double-T
+Enduro
+Esskey
+Faggio
+Faggio Mod
+Faggio Sport
+FCR 1000
+FCR 1000 Custom
+Gargoyle
+Hakuchou
+Hakuchou Drag
+Hexer
+Innovation
+Lectro
+Manchez
+Nemesis
+Nightblade
+Oppressor
+Oppressor Mk II
+PCJ 600
+Rampant Rocket
+Rat Bike
+Ruffian
+Sanchez
+Sanctus
+Shotaro
+Sovereign
+Stryder
+Thrust
+Vader
+Vindicator
+Vortex
+Wolfsbane
+Zombie Bobber
+Zombie Chopper
+Blade
+Buccaneer
+Buccaneer Custom
+Burger Shot Stallion
+Chino
+Chino Custom
+Clique
+Coquette BlackFin
+Deviant
+Dominator
+Dominator (Arena)
+Dominator GTX
+Drift Yosemite
+Duke O'Death
+Dukes
+Ellie
+Faction
+Faction Custom
+Faction Custom Donk
+Gauntlet
+Gauntlet Classic
+Gauntlet Hellfire
+Hermes
+Hotknife
+Hustler
+Impaler
+Impaler (Arena)
+Imperator
+Lost Slamvan
+Lurcher
+Moonbeam
+Moonbeam Custom
+Nightshade
+Peyote Gasser
+Phoenix
+Picador
+Pisswasser Dominator
+Rat-Loader
+Rat-Truck
+Redwood Gauntlet
+Ruiner
+Ruiner 2000
+Sabre Turbo
+Sabre Turbo Custom
+Slamvan
+Slamvan (Arena)
+Slamvan Custom
+Stallion
+Tampa
+Tulip
+Vamos
+Vigero
+Virgo
+Virgo Classic
+Virgo Classic Custom
+Voodoo
+Voodoo Custom
+Weaponized Tampa
+Yosemite
+Bifta
+Blazer
+Blazer Aqua
+Blazer Lifeguard
+Bodhi
+Brawler
+Bruiser
+Brutus
+Caracara
+Caracara 4x4
+Desert Raid
+Dubsta 6x6
+Dune Buggy
+Dune FAV
+Duneloader
+Everon
+Freecrawler
+Hellion
+Hot Rod Blazer
+Injection
+Insurgent
+Insurgent Pick-Up
+Insurgent Pick-Up Custom
+Kalahari
+Kamacho
+Liberator
+Marshall
+Menacer
+Mesa (Merryweather)
+Nightshark
+Outlaw
+Ramp Buggy
+Ramp Buggy (Spoiler)
+Rancher XL
+RC Bandito
+Rebel
+Riata
+Rusty Rebel
+Sandking SWB
+Sandking XL
+Sasquatch
+Space Docker
+Street Blazer
+Technical
+Technical Aqua
+Technical Custom
+Trophy Truck
+Vagrant
+Zhaba
+PR4
+R88
+Alpha-Z1
+Avenger
+B-11 Strikeforce
+Besra
+Blimp (Atomic)
+Blimp (Nightclub)
+Blimp (Xero)
+Cargoplane
+Cuban 800
+Dodo
+Duster
+Howard NX-25
+Hydra
+Jet
+LF-22 Starling
+Luxor
+Luxor Deluxe
+Mallard
+Mammatus
+Miljet
+Mogul
+Nimbus
+P-45 Nokota
+P-996 Lazer
+Pyro
+RM-10 Bombushka
+Rogue
+Seabreeze
+Shamal
+Titan
+Tula
+Ultralight
+V-65 Molotok
+Velum
+Vestra
+Volatol
+Asea
+Asterope
+Cognoscenti
+Cognoscenti (Armored)
+Cognoscenti 55
+Cognoscenti 55 (Armored)
+Emperor
+Fugitive
+Glendale
+Ingot
+Intruder
+Premier
+Primo
+Primo Custom
+Regina
+Romero Hearse
+Schafter
+Schafter LWB (Armored)
+Schafter V12 (Armored)
+Stafford
+Stanier
+Stratum
+Stretch
+Super Diamond
+Surge
+Tailgater
+Turreted Limo
+Warrener
+Washington
+Brickade
+Bus
+Dashound
+Dune
+Festival Bus
+Rental Shuttle Bus
+Taxi
+Tourbus
+Trashmaster
+Wastelander
+8F Drafter
+9F
+9F Cabrio
+Alpha
+Banshee
+Bestia GTS
+Blista Compact
+Buffalo
+Buffalo S
+Carbonizzare
+Comet
+Comet Retro Custom
+Comet Safari
+Comet SR
+Coquette
+Drift Tampa
+Elegy Retro Custom
+Elegy RH8
+Feltzer
+Flash GT
+Furore GT
+Fusilade
+Futo
+GB200
+Go Go Monkey Blista
+Hotring Sabre
+Imorgon
+Issi Sport
+Itali GTO
+Jester
+Jester (Racecar)
+Jester Classic
+Jugular
+Khamelion
+Komoda
+Kuruma
+Kuruma (Armored)
+Locust
+Lynx
+Massacro
+Massacro (Racecar)
+Neo
+Neon
+Omnis
+Paragon R
+Paragon R (Armored)
+Pariah
+Penumbra
+Raiden
+Rapid GT
+Rapid GT Cabrio
+Raptor
+Revolter
+Ruston
+Schafter LWB
+Schafter V12
+Schlagen GT
+Schwartzer
+Sentinel Classic
+Seven-70
+Specter
+Specter Custom
+Sprunk Buffalo
+Streiter
+Sugoi
+Sultan
+Sultan Classic
+Surano
+Tropos Rallye
+V-STR
+Verlierer
+ZR380
+190z
+Ardent
+Casco
+Cheburek
+Cheetah Classic
+Coquette Classic
+Deluxo
+Dynasty
+Fagaloa
+Franken Stange
+GT500
+Infernus Classic
+JB 700
+JB 700W
+Mamba
+Manana
+Michelli GT
+Monroe
+Nebula Turbo
+Peyote
+Pigalle
+Rapid GT Classic
+Retinue
+Retinue Mk II
+Roosevelt
+Roosevelt Valor
+Savestra
+Stinger
+Stinger GT
+Stirling GT
+Stromberg
+Swinger
+Torero
+Tornado
+Tornado Cabrio
+Tornado Custom
+Tornado Mariachi
+Tornado Rat Rod
+Turismo Classic
+Viseris
+Z-Type
+Zion Classic
+811
+Adder
+Autarch
+Banshee 900R
+Bullet
+Cheetah
+Cyclone
+Deveste Eight
+Emerus
+Entity XF
+Entity XXR
+ETR1
+FMJ
+Furia
+GP1
+Infernus
+Itali GTB
+Itali GTB Custom
+Krieger
+Nero
+Nero Custom
+Osiris
+Penetrator
+RE-7B
+Reaper
+Rocket Voltic
+S80RR
+SC1
+Scramjet
+Sultan RS
+T20
+Taipan
+Tempesta
+Tezeract
+Thrax
+Turismo R
+Tyrant
+Tyrus
+Vacca
+Vagner
+Vigilante
+Visione
+Voltic
+X80 Proto
+XA-21
+Zentorno
+Zorrusso
+Baller
+Baller (Old)
+Baller LE
+Baller LE (Armored)
+Baller LE LWB
+Baller LE LWB (Armored)
+BeeJay XL
+Cavalcade
+Cavalcade (Old)
+Contender
+Dubsta
+Dubsta 2
+FQ2
+Granger
+Gresley
+Habanero
+Huntley S
+Landstalker
+Mesa
+Novak
+Patriot
+Patriot Stretch
+Radius
+Rebla GTS
+Rocoto
+Seminole
+Serrano
+Toros
+XLS
+XLS (Armored)
+Airtug
+Caddy
+Caddy (Bunker)
+Caddy (Rusty)
+Docktug
+Fieldmaster
+Forklift
+Lawn Mower
+Mobile Operations Center
+Ripley
+Sadler
+Scrap Truck
+Towtruck (Large)
+Towtruck (Small)
+Tractor
+Utility Truck
+Utility Truck (Cherry Picker)
+Utility Truck (Van)
+Armored Boxville
+Bison
+Bobcat XL
+Boxville
+Bugstars Burrito
+Burrito
+Camper
+Clown Van
+Gang Burrito
+Gang Burrito (Lost)
+Journey
+Minivan
+Minivan Custom
+Paradise
+Pony
+Rumpo
+Rumpo Custom
+Speedo
+Speedo Custom
+Surfer
+Taco Van
+Youga
+Youga Classic
