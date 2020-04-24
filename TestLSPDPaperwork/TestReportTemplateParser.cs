@@ -19,7 +19,7 @@ namespace TestLSPDPaperwork
         [TestMethod]
         public void ReportTemplateParserCorrectlyExtractsPrefilledInputAndReplacesIt()
         {
-            var parser = new ReportTemplateParser(new StringReader("Hello__ThisIsALongVariable__ __name:This is prefill___"));
+            var parser = new ReportTemplateParser(new StringReader("Hello__ThisIsALongVariable__ __name:This is prefill__"));
             var prefill = parser.GetPrefill("name");
             Assert.AreEqual("This is prefill", prefill);
             parser.SetValue("ThisIsALongVariable", "asdf");

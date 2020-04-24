@@ -9,7 +9,7 @@ namespace LSPDPaperwork
 {
     public class ReportTemplateParser : IReportTemplateParser
     {
-        private static readonly Regex rgx = new Regex("__([A-z0-9]+):(.+?)__");
+        private static readonly Regex rgx = new Regex("__([A-z0-9]+):((.|[\r\n])+?)__");
 
         private readonly string template;
         private readonly IDictionary<string, string> vars = new Dictionary<string, string>();
@@ -60,7 +60,7 @@ namespace LSPDPaperwork
                 {
                     var end = ret.ToString().IndexOf("__", idx + prefill.Length, StringComparison.Ordinal);
                     idx = idx + prefill.Length - 1;
-                    ret.Remove(idx, end - idx + 1);
+                    ret.Remove(idx, end - idx);
                 }
                 ret.Replace("__" + pair.Key + "__", pair.Value);
             }

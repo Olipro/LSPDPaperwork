@@ -30,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label lblImpoundReason;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label lblLocation;
@@ -115,6 +116,11 @@
             this.dtWatchEnd = new System.Windows.Forms.DateTimePicker();
             this.numArrests = new System.Windows.Forms.NumericUpDown();
             this.numCitations = new System.Windows.Forms.NumericUpDown();
+            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.trayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.trayMenuAOT = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayContextMenuSep = new System.Windows.Forms.ToolStripSeparator();
+            this.trayMenuExit = new System.Windows.Forms.ToolStripMenuItem();
             lblImpoundReason = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             lblLocation = new System.Windows.Forms.Label();
@@ -159,6 +165,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).BeginInit();
+            this.trayContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblImpoundReason
@@ -1194,6 +1201,41 @@
             this.numCitations.Size = new System.Drawing.Size(120, 20);
             this.numCitations.TabIndex = 4;
             // 
+            // trayIcon
+            // 
+            this.trayIcon.ContextMenuStrip = this.trayContextMenu;
+            this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
+            this.trayIcon.Text = "LSPD Paperwork";
+            this.trayIcon.Visible = true;
+            // 
+            // trayContextMenu
+            // 
+            this.trayContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trayMenuAOT,
+            this.trayContextMenuSep,
+            this.trayMenuExit});
+            this.trayContextMenu.Name = "trayContextMenu";
+            this.trayContextMenu.Size = new System.Drawing.Size(152, 54);
+            this.trayContextMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.TrayContextMenu_ItemClicked);
+            // 
+            // trayMenuAOT
+            // 
+            this.trayMenuAOT.CheckOnClick = true;
+            this.trayMenuAOT.Name = "trayMenuAOT";
+            this.trayMenuAOT.Size = new System.Drawing.Size(151, 22);
+            this.trayMenuAOT.Text = "Always on Top";
+            // 
+            // trayContextMenuSep
+            // 
+            this.trayContextMenuSep.Name = "trayContextMenuSep";
+            this.trayContextMenuSep.Size = new System.Drawing.Size(148, 6);
+            // 
+            // trayMenuExit
+            // 
+            this.trayMenuExit.Name = "trayMenuExit";
+            this.trayMenuExit.Size = new System.Drawing.Size(151, 22);
+            this.trayMenuExit.Text = "Exit";
+            // 
             // LSPDPMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1222,6 +1264,7 @@
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).EndInit();
+            this.trayContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1280,6 +1323,11 @@
         private System.Windows.Forms.TextBox txtTimestamp;
         private System.Windows.Forms.TextBox txtVehDetails;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NotifyIcon trayIcon;
+        private System.Windows.Forms.ContextMenuStrip trayContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem trayMenuAOT;
+        private System.Windows.Forms.ToolStripSeparator trayContextMenuSep;
+        private System.Windows.Forms.ToolStripMenuItem trayMenuExit;
     }
 }
 

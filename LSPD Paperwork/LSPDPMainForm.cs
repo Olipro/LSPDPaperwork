@@ -278,5 +278,13 @@ namespace LSPDPaperwork
             if (susp != null)
                 name.Text = susp.Name;
         }
+
+        private void TrayContextMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (e.ClickedItem == trayMenuAOT)
+                TopMost = !trayMenuAOT.Checked;
+            else if (e.ClickedItem == trayMenuExit)
+                Close();
+        }
     }
 }
