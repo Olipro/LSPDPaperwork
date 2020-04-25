@@ -22,7 +22,10 @@ namespace LSPDPaperwork
 
         public override bool Equals(object obj)
         {
-            return obj is Suspect s ? (Name.Equals(s.Name, StringComparison.OrdinalIgnoreCase) && Phone.Equals(s.Phone, StringComparison.Ordinal)) : base.Equals(obj);
+            return obj is Suspect s &&
+                (this == s ||
+                (Name.Equals(s.Name, StringComparison.OrdinalIgnoreCase) &&
+                 Phone.Equals(s.Phone, StringComparison.Ordinal)));
         }
 
         public override int GetHashCode()

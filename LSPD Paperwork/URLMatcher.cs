@@ -20,7 +20,7 @@ namespace LSPDPaperwork
 
         public bool HasMatchFor(string str)
         {
-            if (!Uri.TryCreate(str, UriKind.Absolute, out Uri _))
+            if (!Uri.TryCreate(str, UriKind.Absolute, out _))
                 return false;
             foreach (var needle in uris)
                 if (str.Contains(needle))

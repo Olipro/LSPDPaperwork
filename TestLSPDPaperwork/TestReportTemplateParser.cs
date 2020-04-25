@@ -36,5 +36,13 @@ namespace TestLSPDPaperwork
             Assert.AreEqual("filled", prefilled["pre"]);
             Assert.AreEqual("filled2", prefilled["pre2"]);
         }
+
+        [TestMethod]
+        public void GetPrefillReturnsEmptyStringIfVarNotFound()
+        {
+            var parser = new ReportTemplateParser(new StringReader("__var__X__var2:tst__"));
+            Assert.AreEqual("", parser.GetPrefill("var"));
+            Assert.AreEqual("tst", parser.GetPrefill("var2"));
+        }
     }
 }

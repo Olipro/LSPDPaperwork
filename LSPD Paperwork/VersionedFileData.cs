@@ -6,7 +6,7 @@ namespace LSPDPaperwork
 {
     public abstract class VersionedFileData
     {
-        private static readonly DateTime buildTime = File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location);
+        protected static readonly DateTime buildTime = File.GetLastWriteTimeUtc(Assembly.GetExecutingAssembly().Location);
 
         protected VersionedFileData(string file, string embeddedData)
         {

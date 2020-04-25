@@ -2,7 +2,7 @@
 [size=150]Los Santos Police Department[/size][/b]
 [size=115]ARREST REPORT[/size]
 [size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
-
+[hr][/hr]
 [float=right][b][size=115]MUGSHOT[/size][/b][/float][list=none][b][size=115]SUSPECT DETAILS[/size][/b]
 [list=none] [float=right] [fimg=200,185]__mugshot__[/fimg] [/float]
 

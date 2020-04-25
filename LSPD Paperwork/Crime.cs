@@ -4,76 +4,64 @@ namespace LSPDPaperwork
 {
     public class Crime
     {
-        private readonly string code;
-        private readonly string description;
-        private string prefix = "";
-        private string suffix = "";
-
         public Crime(string code, string description)
         {
-            this.code = code;
-            this.description = description;
+            Code = code;
+            Description = description;
         }
 
         public void AddPrefix(string prefix)
         {
-            this.prefix = prefix + this.prefix;
+            Prefix = prefix + Prefix;
         }
 
         public void DelPrefix(string prefix)
         {
-            this.prefix = this.prefix.Replace(prefix, "");
+            Prefix = Prefix.Replace(prefix, "");
         }
 
         public void AddSuffix(string suffix)
         {
-            this.suffix += suffix;
+            Suffix += suffix;
         }
 
         public void DelSuffix(string suffix)
         {
-            this.suffix = this.suffix.Replace(suffix, "");
+            Suffix = this.Suffix.Replace(suffix, "");
         }
 
         public override string ToString()
         {
-            return code + " - " + prefix + description + suffix;
+            return Code + " - " + Prefix + Description + Suffix;
         }
 
-        public string Description()
-        {
-            return description;
-        }
+        public string Code { get; }
 
-        public string Prefix()
-        {
-            return prefix;
-        }
+        public string Description { get; }
 
-        public string Suffix()
-        {
-            return suffix;
-        }
+        public string Prefix { get; private set; } = "";
+
+        public string Suffix { get; private set; } = "";
 
         public bool Equals(string desc)
         {
-            return description.Equals(desc, StringComparison.OrdinalIgnoreCase) || ToString().Equals(desc, StringComparison.OrdinalIgnoreCase);
+            return Description.Equals(desc, StringComparison.OrdinalIgnoreCase) || ToString().Equals(desc, StringComparison.OrdinalIgnoreCase);
         }
 
         public override bool Equals(object obj)
         {
-            return obj is Crime c ? c.code.Equals(code, StringComparison.Ordinal) : base.Equals(obj);
+            return obj is Crime c && (this == c || Code.Equals(c.Code, StringComparison.Ordinal));
         }
 
         public override int GetHashCode()
         {
-            return code.GetHashCode();
+            return Code.GetHashCode();
         }
 
         public void Reset()
         {
-            prefix = "";
-            suffix = "";
+            Prefix = "";
+            Suffix = "";
         }
     }
 }

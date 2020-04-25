@@ -3,7 +3,7 @@
 [size=150]Los Santos Police Department[/size][/b]
 [size=115]IMPOUND RELEASE REPORT[/size]
 [size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
-[hr]
+[hr][/hr]
 [list=none][b][size=115]VEHICLE DETAILS[/size][/b]
 [list=none]
 [b]Vehicle Owner:[/b] __vehOwner__

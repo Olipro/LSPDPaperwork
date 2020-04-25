@@ -1,5 +1,6 @@
 ﻿using LSPDPaperwork;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.IO;
 
 namespace TestLSPDPaperwork
@@ -96,6 +97,31 @@ namespace TestLSPDPaperwork
                 Assert.IsTrue(str.Contains("Joey Doe__4444444"));
                 Assert.IsFalse(str.Contains("Joey Doe__5555555"));
             }
+        }
+
+        [TestMethod]
+        public void SuspectManagerIgnoresInvalidPhoneNumberOrName()
+        {
+            using (var suspMgr = new SuspectManager())
+            {
+                Assert.AreEqual(0, suspMgr.Suspects.Count);
+                suspMgr.AddSuspect(new Suspect("John Smith", "123456"));
+                suspMgr.AddSuspect(new Suspect("John Smith", "12345678"));
+                suspMgr.AddSuspect(new Suspect("John Smith", ""));
+                suspMgr.AddSuspect(new Suspect("", "1234567"));
+                Assert.AreEqual(0, suspMgr.Suspects.Count);
+            }
+        }
+
+        [TestMethod]
+        public void SuspectManagerFinalizesItselfCorrectly()
+        {
+            using (var file = File.Create(SuspectManager.TEMPLATE))
+            using (var strm = new StreamWriter(file))
+                strm.Write("John Smith__1234567");
+            new SuspectManager().AddSuspect(new Suspect("Jane Doe", "5555555"));
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
     }
 }

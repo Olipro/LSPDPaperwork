@@ -4,10 +4,10 @@ using System.IO;
 
 namespace LSPDPaperwork
 {
-    class ImpoundReporter : VersionedFileData, IReporter
+    public class ImpoundReporter : VersionedFileData, IReporter
     {
         public const string TEMPLATE = "ImpoundReport.txt";
-        private static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");
+        public static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");
 
         private readonly IReportTemplateParser parser;
 

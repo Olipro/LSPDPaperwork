@@ -3,22 +3,19 @@ using System.Windows.Forms;
 
 namespace LSPDPaperwork
 {
-    class VehicleList : VersionedFileData
+    public class VehicleList : VersionedFileData
     {
         public const string TEMPLATE = "Vehicles.txt";
-        private AutoCompleteStringCollection vehicles = new AutoCompleteStringCollection();
+
+        public AutoCompleteStringCollection Vehicles { get; } = new AutoCompleteStringCollection();
+
         public VehicleList() : base(TEMPLATE, Properties.Resources.Vehicles)
         {
             using (var file = File.OpenRead(TEMPLATE))
             using (var strm = new StreamReader(file)) {
                 while (!strm.EndOfStream)
-                    vehicles.Add(strm.ReadLine());
+                    Vehicles.Add(strm.ReadLine());
             }
-        }
-
-        public AutoCompleteStringCollection Vehicles()
-        {
-            return vehicles;
         }
     }
 }

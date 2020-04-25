@@ -4,7 +4,7 @@ using System.IO;
 
 namespace LSPDPaperwork
 {
-    class DutyReporter : VersionedFileData, IReporter
+    public class DutyReporter : VersionedFileData, IReporter
     {
         public const string TEMPLATE = "DutyReport.txt";
         public static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");

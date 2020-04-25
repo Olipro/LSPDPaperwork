@@ -85,15 +85,16 @@ namespace LSPDPaperwork
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposing || dbFile == null)
-                return;
-            dbFile.SetLength(0);
-            dbFile.Seek(0, SeekOrigin.Begin);
-            using (var dbWr = new StreamWriter(dbFile))
-                foreach (var suspect in suspects)
-                    dbWr.WriteLine(suspect);
-            dbFile.Close();
-            dbFile = null;
+            using (dbFile)
+            {
+                if (!disposing)
+                    return;
+                dbFile.SetLength(0);
+                dbFile.Seek(0, SeekOrigin.Begin);
+                using (var dbWr = new StreamWriter(dbFile))
+                    foreach (var suspect in suspects)
+                        dbWr.WriteLine(suspect);
+            }
         }
         
         ~SuspectManager()

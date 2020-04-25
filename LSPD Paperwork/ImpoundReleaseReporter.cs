@@ -4,7 +4,7 @@ using System.IO;
 
 namespace LSPDPaperwork
 {
-    class ImpoundReleaseReporter : VersionedFileData, IReporter
+    public class ImpoundReleaseReporter : VersionedFileData, IReporter
     {
         public const string TEMPLATE = "ImpoundRelease.txt";
         public static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");

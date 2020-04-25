@@ -31,12 +31,12 @@ namespace LSPDPaperwork
             txtOfficersInvolved.Text = new ImpoundReporter().GetPrefill();
 
             var vehicleList = new VehicleList();
-            txtVehModel.AutoCompleteCustomSource = vehicleList.Vehicles();
-            txtRelModel.AutoCompleteCustomSource = vehicleList.Vehicles();
+            txtVehModel.AutoCompleteCustomSource = vehicleList.Vehicles;
+            txtRelModel.AutoCompleteCustomSource = vehicleList.Vehicles;
 
-            foreach (var crime in crimeList.Crimes())
+            foreach (var crime in crimeList.Crimes)
                 chkCrimes.Items.Add(crime);
-            txtSuggestCharge.AutoCompleteCustomSource = crimeList.CrimesAutoCompletion();
+            txtSuggestCharge.AutoCompleteCustomSource = crimeList.CrimesAutoCompletion;
 
             btnDict.Add(btnAttempted, "Attempted ");
             btnDict.Add(btnAccessory, "Accessory to ");
@@ -69,7 +69,7 @@ namespace LSPDPaperwork
 
         private void ResetCrimes()
         {
-            foreach (var crime in crimeList.Crimes())
+            foreach (var crime in crimeList.Crimes)
                 crime.Reset();
             chkCrimes.Refresh();
             foreach (var i in chkCrimes.CheckedIndices)
@@ -231,13 +231,13 @@ namespace LSPDPaperwork
             Action<string> func;
             if (append)
             {
-                if (crime.Suffix().Contains(extra))
+                if (crime.Suffix.Contains(extra))
                     func = crime.DelSuffix;
                 else
                     func = crime.AddSuffix;
             } else
             {
-                if (crime.Prefix().Contains(extra))
+                if (crime.Prefix.Contains(extra))
                     func = crime.DelPrefix;
                 else
                     func = crime.AddPrefix;
