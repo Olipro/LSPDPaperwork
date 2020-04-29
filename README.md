@@ -5,6 +5,8 @@ This is a helper application for doing LSPD Paperwork on Eclipse RP. Templates a
 
 You are of course free to write your own templates instead and use it for your own purposes.
 
+When running for the first time, you will be prompted for your name, URL to an image of your signature and the reply URL for your Duty reports.
+
 # Downloading
 
 Go to the [Releases section](https://github.com/Olipro/LSPDPaperwork/releases) here on GitHub to get the pre-built version.

@@ -1,15 +1,12 @@
 ﻿using LSPDPaperwork;
-using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestVehicleList
-    {
+    public class TestVehicleList {
         [TestMethod]
-        public void VehicleListIsCorrectlyPopulated()
-        {
+        public void VehicleListIsCorrectlyPopulated() {
             using (var file = File.Create(VehicleList.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("VehA\nVehB\nVehC\n");

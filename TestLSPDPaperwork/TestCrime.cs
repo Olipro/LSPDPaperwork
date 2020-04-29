@@ -1,15 +1,11 @@
-﻿using System;
-using LSPDPaperwork;
+﻿using LSPDPaperwork;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestCrime
-    {
+    public class TestCrime {
         [TestMethod]
-        public void PrefixesAndSuffixesAreCorrectlyHandled()
-        {
+        public void PrefixesAndSuffixesAreCorrectlyHandled() {
             var c = new Crime("AB12", "SomeDesc");
             c.AddPrefix("Prefix");
             Assert.AreEqual("AB12 - PrefixSomeDesc", c.ToString());
@@ -30,8 +26,7 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void EqualityComparisonsAreCorrectlyHandled()
-        {
+        public void EqualityComparisonsAreCorrectlyHandled() {
             var c = new Crime("BA45", "AnotherDesc");
             Assert.IsTrue(c.Equals("AnotherDesc"));
             Assert.IsTrue(c.Equals(new Crime("BA45", "DifferentDesc")));

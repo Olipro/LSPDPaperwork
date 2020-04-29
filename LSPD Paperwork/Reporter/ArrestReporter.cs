@@ -2,30 +2,28 @@
 using System.Diagnostics.Contracts;
 using System.IO;
 
-namespace LSPDPaperwork
-{
-    public class ArrestReporter : VersionedFileData, IReporter
-    {
+using static LSPDPaperwork.Properties.Resources;
+
+namespace LSPDPaperwork {
+    public class ArrestReporter : VersionedFileData, IReporter {
         public const string TEMPLATE = "ArrestReport.txt";
         private readonly IReportTemplateParser parser;
 
-        public ArrestReporter() : base(TEMPLATE, Properties.Resources.ArrestReport)
-        {
+        public ArrestReporter() : base(TEMPLATE, ArrestReport) {
             using (var file = File.OpenRead(TEMPLATE))
                 parser = new ReportTemplateParser(file);
         }
-        
+
         public ArrestReporter(string suspect,
                               string phone,
                               bool licensesRevoked,
                               string[] officers,
                               string mugshot,
-                              IEnumerable<Crime> crimes,
-                              string narrative) : this()
-        {
+                              IEnumerable<object> crimes,
+                              string narrative) : this() {
             Contract.Requires(officers != null);
             Contract.Requires(crimes != null);
-            
+
             parser.SetValue("suspect", suspect);
             parser.SetValue("phone", phone);
             parser.SetValue("licensesRevoked", licensesRevoked ? "Yes" : "No");
@@ -34,22 +32,20 @@ namespace LSPDPaperwork
             string officersStr = "";
             foreach (var officer in officers)
                 officersStr += "[*]" + officer + '\n';
-            officersStr = officersStr.TrimEnd(new char[]{ '\n', '\r'});
+            officersStr = officersStr.TrimEnd(new char[] { '\n', '\r' });
             parser.SetValue("officers", officersStr);
             string chargesStr = "";
             foreach (Crime crime in crimes)
                 chargesStr += "[*]" + crime.ToString() + '\n';
-            chargesStr = chargesStr.TrimEnd(new char[]{ '\r', '\n' });
+            chargesStr = chargesStr.TrimEnd(new char[] { '\r', '\n' });
             parser.SetValue("charges", chargesStr);
         }
 
-        public string GetPrefill()
-        {
+        public string GetPrefill() {
             return parser.GetPrefill("officers");
         }
 
-        public string GetReport()
-        {
+        public string GetReport() {
             return parser.Parse();
         }
     }

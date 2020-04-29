@@ -1,37 +1,29 @@
 ﻿using System;
 
-namespace LSPDPaperwork
-{
-    public class Crime
-    {
-        public Crime(string code, string description)
-        {
+namespace LSPDPaperwork {
+    public class Crime : ICrime {
+        public Crime(string code, string description) {
             Code = code;
             Description = description;
         }
 
-        public void AddPrefix(string prefix)
-        {
+        public void AddPrefix(string prefix) {
             Prefix = prefix + Prefix;
         }
 
-        public void DelPrefix(string prefix)
-        {
+        public void DelPrefix(string prefix) {
             Prefix = Prefix.Replace(prefix, "");
         }
 
-        public void AddSuffix(string suffix)
-        {
+        public void AddSuffix(string suffix) {
             Suffix += suffix;
         }
 
-        public void DelSuffix(string suffix)
-        {
-            Suffix = this.Suffix.Replace(suffix, "");
+        public void DelSuffix(string suffix) {
+            Suffix = Suffix.Replace(suffix, "");
         }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             return Code + " - " + Prefix + Description + Suffix;
         }
 
@@ -43,23 +35,17 @@ namespace LSPDPaperwork
 
         public string Suffix { get; private set; } = "";
 
-        public bool Equals(string desc)
-        {
+        public bool Equals(string desc) {
             return Description.Equals(desc, StringComparison.OrdinalIgnoreCase) || ToString().Equals(desc, StringComparison.OrdinalIgnoreCase);
         }
 
-        public override bool Equals(object obj)
-        {
+        public override bool Equals(object obj) {
             return obj is Crime c && (this == c || Code.Equals(c.Code, StringComparison.Ordinal));
         }
 
-        public override int GetHashCode()
-        {
-            return Code.GetHashCode();
-        }
+        public override int GetHashCode() => Code.GetHashCode();
 
-        public void Reset()
-        {
+        public void Reset() {
             Prefix = "";
             Suffix = "";
         }

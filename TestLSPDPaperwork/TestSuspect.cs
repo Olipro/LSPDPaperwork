@@ -1,14 +1,11 @@
 ﻿using LSPDPaperwork;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestSuspect
-    {
+    public class TestSuspect {
         [TestMethod]
-        public void SuspectCorrectlyStoresAndComparesData()
-        {
+        public void SuspectCorrectlyStoresAndComparesData() {
             var susp = new Suspect("SomeName", "1234567");
             Assert.AreEqual("SomeName", susp.Name);
             Assert.AreEqual("1234567", susp.Phone);

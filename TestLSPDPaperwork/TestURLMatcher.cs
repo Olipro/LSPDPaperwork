@@ -1,15 +1,12 @@
 ﻿using LSPDPaperwork;
-using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestURLMatcher
-    {
+    public class TestURLMatcher {
         [TestMethod]
-        public void URLMatcherCorrectlyMatchesData()
-        {
+        public void URLMatcherCorrectlyMatchesData() {
             using (var file = File.Create("testURL.txt"))
             using (var strm = new StreamWriter(file))
                 strm.Write("url.example.com\nabc.example.net");

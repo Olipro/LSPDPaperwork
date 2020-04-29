@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Globalization;
 
-namespace LSPDPaperwork
-{
-    public class Suspect
-    {
+namespace LSPDPaperwork {
+    public class Suspect {
         private static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");
-        public Suspect(string name, string phone)
-        {
+        public Suspect(string name, string phone) {
             Name = name;
             Phone = phone;
         }
@@ -15,21 +12,18 @@ namespace LSPDPaperwork
         public string Name { get; }
         public string Phone { get; set; }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             return Name + "__" + Phone;
         }
 
-        public override bool Equals(object obj)
-        {
+        public override bool Equals(object obj) {
             return obj is Suspect s &&
                 (this == s ||
                 (Name.Equals(s.Name, StringComparison.OrdinalIgnoreCase) &&
                  Phone.Equals(s.Phone, StringComparison.Ordinal)));
         }
 
-        public override int GetHashCode()
-        {
+        public override int GetHashCode() {
             return Name.ToLower(enUS).GetHashCode();
         }
     }

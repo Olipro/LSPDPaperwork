@@ -2,14 +2,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestCrimeList
-    {
+    public class TestCrimeList {
         [TestMethod]
-        public void ListOfCrimesAreCorrectlyHandled()
-        {
+        public void ListOfCrimesAreCorrectlyHandled() {
             using (var file = File.Create(CrimeList.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("AB01__Test1\nAB02__Test2\nAB03__Test3");

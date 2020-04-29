@@ -2,14 +2,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestReportTemplateParser
-    {
+    public class TestReportTemplateParser {
         [TestMethod]
-        public void ReportTemplateParserCorrectlySubstitutesVariables()
-        {
+        public void ReportTemplateParserCorrectlySubstitutesVariables() {
             var parser = new ReportTemplateParser(new StringReader("Hello __name__, you are __this__"));
             parser.SetValue("name", "john");
             parser.SetValue("this", "here");
@@ -17,8 +14,7 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void ReportTemplateParserCorrectlyExtractsPrefilledInputAndReplacesIt()
-        {
+        public void ReportTemplateParserCorrectlyExtractsPrefilledInputAndReplacesIt() {
             var parser = new ReportTemplateParser(new StringReader("Hello__ThisIsALongVariable__ __name:This is prefill__"));
             var prefill = parser.GetPrefill("name");
             Assert.AreEqual("This is prefill", prefill);
@@ -28,8 +24,7 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void ReportTemplateParserFindsAllPrefilledVars()
-        {
+        public void ReportTemplateParserFindsAllPrefilledVars() {
             var parser = new ReportTemplateParser(new StringReader("Hello __var__, __pre:filled____pre2:filled2__"));
             var prefilled = parser.GetAllPrefills();
             Assert.AreEqual(2, prefilled.Count);
@@ -38,8 +33,7 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void GetPrefillReturnsEmptyStringIfVarNotFound()
-        {
+        public void GetPrefillReturnsEmptyStringIfVarNotFound() {
             var parser = new ReportTemplateParser(new StringReader("__var__X__var2:tst__"));
             Assert.AreEqual("", parser.GetPrefill("var"));
             Assert.AreEqual("tst", parser.GetPrefill("var2"));

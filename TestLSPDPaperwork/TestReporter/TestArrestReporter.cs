@@ -3,22 +3,18 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.IO;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestArrestReporter
-    {
+    public class TestArrestReporter {
         [TestInitialize]
         [TestCleanup]
-        public void Cleanup()
-        {
+        public void Cleanup() {
             if (File.Exists(ArrestReporter.TEMPLATE))
                 File.Delete(ArrestReporter.TEMPLATE);
         }
 
         [TestMethod]
-        public void ArrestReporterSuccessfullyProcessesData()
-        {
+        public void ArrestReporterSuccessfullyProcessesData() {
             using (var file = File.OpenWrite(ArrestReporter.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("A __suspect__ w __phone__ x __licensesRevoked__ 4 __narrative__ 7 __mugshot__ 8 __officers:somedata__ 9 __charges__");

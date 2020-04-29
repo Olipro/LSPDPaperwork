@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 using System.Globalization;
 using System.IO;
 
-namespace LSPDPaperwork
-{
-    public class ImpoundReleaseReporter : VersionedFileData, IReporter
-    {
+using static LSPDPaperwork.Properties.Resources;
+
+namespace LSPDPaperwork {
+    public class ImpoundReleaseReporter : VersionedFileData, IReporter {
         public const string TEMPLATE = "ImpoundRelease.txt";
         public static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");
         private readonly IReportTemplateParser parser;
+
         public ImpoundReleaseReporter(string vehOwner,
                                       string phoneNum,
                                       string license,
@@ -16,8 +18,8 @@ namespace LSPDPaperwork
                                       string vehColor,
                                       DateTime impoundDate,
                                       string impOfficer,
-                                      string fee) : base(TEMPLATE, Properties.Resources.ImpoundRelease)
-        {
+                                      string fee) : base(TEMPLATE, ImpoundRelease) {
+            Contract.Requires(fee != null);
             using (var file = File.OpenRead(TEMPLATE))
                 parser = new ReportTemplateParser(file);
             if (fee.Equals("0", StringComparison.Ordinal))
@@ -32,8 +34,9 @@ namespace LSPDPaperwork
             parser.SetValue("fee", "$" + fee);
         }
 
-        public string GetReport()
-        {
+        public string GetPrefill() => "";
+
+        public string GetReport() {
             return parser.Parse();
         }
     }

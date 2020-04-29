@@ -2,16 +2,15 @@
 using System.Globalization;
 using System.IO;
 
-namespace LSPDPaperwork
-{
-    public class DutyReporter : VersionedFileData, IReporter
-    {
+using static LSPDPaperwork.Properties.Resources;
+
+namespace LSPDPaperwork {
+    public class DutyReporter : VersionedFileData, IReporter {
         public const string TEMPLATE = "DutyReport.txt";
         public static readonly CultureInfo enUS = CultureInfo.GetCultureInfo("en-US");
         private readonly IReportTemplateParser parser;
 
-        public DutyReporter() : base(TEMPLATE, Properties.Resources.DutyReport)
-        {
+        public DutyReporter() : base(TEMPLATE, DutyReport) {
             using (var file = File.OpenRead(TEMPLATE))
                 parser = new ReportTemplateParser(file);
         }
@@ -19,8 +18,7 @@ namespace LSPDPaperwork
                             DateTime end,
                             decimal arrests,
                             decimal citations,
-                            string notes) : this()
-        {
+                            string notes) : this() {
             parser.SetValue("date", start.ToString("dd/MM/yyyy", enUS));
             var time = end - start;
             parser.SetValue("dutyHours", time.TotalHours.ToString("N2", enUS));
@@ -32,8 +30,7 @@ namespace LSPDPaperwork
 
         public string GetPrefill() => parser.GetPrefill("notes");
 
-        public string GetReport()
-        {
+        public string GetReport() {
             return parser.Parse();
         }
     }

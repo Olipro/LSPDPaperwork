@@ -10,8 +10,7 @@
 [b]Phone Number:[/b] __phone__
 [b]Licenses Revoked:[/b] __licensesRevoked__
 [b]Officers Involved:[/b] [list]
-__officers:Alex Tanner
-__
+__officers:__
 [/list]
 
 [b]Charges:[/b] [list]

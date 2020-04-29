@@ -2,27 +2,23 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
+using System.Reflection;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestSuspectManager
-    {
+    public class TestSuspectManager {
         [TestCleanup]
-        public void Cleanup()
-        {
+        public void Cleanup() {
             if (File.Exists(SuspectManager.TEMPLATE))
                 File.Delete(SuspectManager.TEMPLATE);
         }
 
         [TestMethod]
-        public void SuspectManagerCorrectlyManagesSuspects()
-        {
+        public void SuspectManagerCorrectlyManagesSuspects() {
             using (var file = File.Create(SuspectManager.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("John Smith__1234567\nJane Doe__7654321\nJohn Doe__3455431");
-            using (var suspMgr = new SuspectManager())
-            {
+            using (var suspMgr = new SuspectManager()) {
                 Assert.AreEqual(suspMgr.Suspects.Count, 3);
                 Assert.AreEqual(suspMgr.SuspNames.Count, 3);
                 Assert.AreEqual(suspMgr.SuspPhnes.Count, 3);
@@ -36,8 +32,7 @@ namespace TestLSPDPaperwork
                 Assert.IsTrue(suspMgr.Suspects.Contains(newSusp));
             }
             using (var file = File.OpenRead(SuspectManager.TEMPLATE))
-            using (var strm = new StreamReader(file))
-            {
+            using (var strm = new StreamReader(file)) {
                 var str = strm.ReadToEnd();
                 Assert.IsTrue(str.Contains("John Smith__1234567"));
                 Assert.IsTrue(str.Contains("Jane Doe__7654321"));
@@ -47,18 +42,15 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void SuspectManagerCorrectlyInitializesFromNoFile()
-        {
+        public void SuspectManagerCorrectlyInitializesFromNoFile() {
             Cleanup();
-            using (var suspMgr = new SuspectManager())
-            {
+            using (var suspMgr = new SuspectManager()) {
                 Assert.AreEqual(suspMgr.Suspects.Count, 0);
                 suspMgr.AddSuspect(new Suspect("John Doe", "1234567"));
                 suspMgr.AddSuspect(new Suspect("Jane Doe", "7654321"));
             }
             using (var file = File.OpenRead(SuspectManager.TEMPLATE))
-            using (var strm = new StreamReader(file))
-            {
+            using (var strm = new StreamReader(file)) {
                 var str = strm.ReadToEnd();
                 Assert.IsTrue(str.Contains("John Doe__1234567"));
                 Assert.IsTrue(str.Contains("Jane Doe__7654321"));
@@ -66,13 +58,11 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void SuspectManagerCorrectlyDeduplicatesFile()
-        {
+        public void SuspectManagerCorrectlyDeduplicatesFile() {
             using (var file = File.Create(SuspectManager.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("John Doe__1234567\nJane Doe__1234567\nAdam Doe__1234123\nAdam Doe__1111111");
-            using (var suspMgr = new SuspectManager())
-            {
+            using (var suspMgr = new SuspectManager()) {
                 Assert.AreEqual(suspMgr.Suspects.Count, 2);
                 Assert.AreEqual(suspMgr.FindFromName("Jane Doe").Phone, "1234567");
                 Assert.IsNull(suspMgr.FindFromName("John Doe"));
@@ -88,8 +78,7 @@ namespace TestLSPDPaperwork
                 Assert.IsNull(suspMgr.FindFromPhone("5555555"));
             }
             using (var file = File.OpenRead(SuspectManager.TEMPLATE))
-            using (var strm = new StreamReader(file))
-            {
+            using (var strm = new StreamReader(file)) {
                 var str = strm.ReadToEnd();
                 Assert.IsTrue(str.Contains("Jane Doe__1234567"));
                 Assert.IsFalse(str.Contains("John Doe"));
@@ -100,10 +89,8 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void SuspectManagerIgnoresInvalidPhoneNumberOrName()
-        {
-            using (var suspMgr = new SuspectManager())
-            {
+        public void SuspectManagerIgnoresInvalidPhoneNumberOrName() {
+            using (var suspMgr = new SuspectManager()) {
                 Assert.AreEqual(0, suspMgr.Suspects.Count);
                 suspMgr.AddSuspect(new Suspect("John Smith", "123456"));
                 suspMgr.AddSuspect(new Suspect("John Smith", "12345678"));
@@ -114,12 +101,13 @@ namespace TestLSPDPaperwork
         }
 
         [TestMethod]
-        public void SuspectManagerFinalizesItselfCorrectly()
-        {
+        public void SuspectManagerFinalizesItselfCorrectly() {
             using (var file = File.Create(SuspectManager.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("John Smith__1234567");
-            new SuspectManager().AddSuspect(new Suspect("Jane Doe", "5555555"));
+            var dispose = typeof(SuspectManager)
+                .GetMethod("Dispose", BindingFlags.NonPublic | BindingFlags.Instance);
+            dispose.Invoke(new SuspectManager(), new object[] { false });
             GC.Collect();
             GC.WaitForPendingFinalizers();
         }

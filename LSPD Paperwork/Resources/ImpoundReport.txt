@@ -20,8 +20,7 @@
 [b]Location:[/b] __location__
 [b]Brief Statement of Impounding Reason:[/b] __reason__
 [b]Officers Involved:[/b]
-__officers:Alex Tanner
-__
+__officers:__
 [b]Documented Evidence:[/b]
 [img]__screenshot__[/img]
 [/list][/list]

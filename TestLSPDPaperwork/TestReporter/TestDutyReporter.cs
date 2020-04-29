@@ -1,16 +1,13 @@
-﻿using System;
-using System.IO;
-using LSPDPaperwork;
+﻿using LSPDPaperwork;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.IO;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestDutyReporter
-    {
+    public class TestDutyReporter {
         [TestMethod]
-        public void DutyReporterCorrectlyProcessesReportData()
-        {
+        public void DutyReporterCorrectlyProcessesReportData() {
             using (var file = File.Create(DutyReporter.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("__date__X__dutyHours__X__watchStart__X__arrests__X__citations__X__notes:def__");

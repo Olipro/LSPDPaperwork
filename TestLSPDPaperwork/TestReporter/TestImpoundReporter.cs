@@ -1,16 +1,13 @@
 ﻿using LSPDPaperwork;
-using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.IO;
 
-namespace TestLSPDPaperwork
-{
+namespace TestLSPDPaperwork {
     [TestClass]
-    public class TestImpoundReporter
-    {
+    public class TestImpoundReporter {
         [TestMethod]
-        public void ImpoundReporterCorrectlyGeneratesReport()
-        {
+        public void ImpoundReporterCorrectlyGeneratesReport() {
             using (var file = File.Create(ImpoundReporter.TEMPLATE))
             using (var strm = new StreamWriter(file))
                 strm.Write("__vehOwner__X__phoneNum__X__license__X__model__X__color__X__details__X__impoundTime__X__location__X__reason__X__officers:XYZ__X__screenshot__");

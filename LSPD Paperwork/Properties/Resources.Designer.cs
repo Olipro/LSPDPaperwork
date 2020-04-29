@@ -65,10 +65,11 @@ namespace LSPDPaperwork.Properties {
         ///[size=150]Los Santos Police Department[/size][/b]
         ///[size=115]ARREST REPORT[/size]
         ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///[hr][/hr]
+        ///[float=right][b][size=115]MUGSHOT[/size][/b][/float][list=none][b][size=115]SUSPECT DETAILS[/size][/b]
+        ///[list=none] [float=right] [fimg=200,185]__mugshot__[/fimg] [/float]
         ///
-        ///[hr]--------------- REPLACE THE IMAGE BELOW THIS LINE WITH THE MUGSHOT OF THE SUSPECT --------------------[/hr]
-        ///
-        ///[float=right][b][size=115]MUGSHOT[/size][/b][/float][list=none][b][size=115]SUSPECT DETAILS[ [rest of string was truncated]&quot;;.
+        ///[b]Full Name:[/b] __sus [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ArrestReport {
             get {
@@ -114,8 +115,10 @@ namespace LSPDPaperwork.Properties {
         ///[b]Arrests:[/b] __arrests__
         ///[b]Citations:[/b] __citations__
         ///
-        ///[b]Notes(Optional):[/b]
-        ///__notes__
+        ///[b]Notes:[/b]
+        ///__notes:My Default Content
+        ///
+        ///__
         ///
         ///[/divbox].
         /// </summary>
@@ -127,7 +130,9 @@ namespace LSPDPaperwork.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to imgur.com
-        ///gyazo.com.
+        ///gyazo.com
+        ///cdn.discordapp.com
+        ///dl.dropboxusercontent.com.
         /// </summary>
         internal static string ImgServices {
             get {
@@ -141,13 +146,13 @@ namespace LSPDPaperwork.Properties {
         ///[size=150]Los Santos Police Department[/size][/b]
         ///[size=115]IMPOUND RELEASE REPORT[/size]
         ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
-        ///[hr]
+        ///[hr][/hr]
         ///[list=none][b][size=115]VEHICLE DETAILS[/size][/b]
         ///[list=none]
         ///[b]Vehicle Owner:[/b] __vehOwner__
         ///[b]Phone Number:[/b] __phoneNum__
         ///[b]License Plate:[/b] __license__
-        ///[b]Vehicle Model:[/b] [rest of string was truncated]&quot;;.
+        ///[b]Vehicle Model [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ImpoundRelease {
             get {
@@ -161,13 +166,13 @@ namespace LSPDPaperwork.Properties {
         ///[size=150]Los Santos Police Department[/size][/b]
         ///[size=115]IMPOUND REPORT[/size]
         ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
-        ///[hr]
+        ///[hr][/hr]
         ///[list=none][b][size=115]VEHICLE DETAILS[/size][/b]
         ///[list=none]
         ///[b]Vehicle Owner:[/b] __vehOwner__
         ///[b]Phone Number:[/b] __phoneNum__
         ///[b]License Plate:[/b] __license__
-        ///[b]Vehicle Model:[/b] __model [rest of string was truncated]&quot;;.
+        ///[b]Vehicle Model:[/b] __ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ImpoundReport {
             get {

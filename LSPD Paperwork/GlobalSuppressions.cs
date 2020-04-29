@@ -6,3 +6,4 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Globalization", "CA1303:Do not pass literals as localized parameters", Justification = "<Pending>", Scope = "member", Target = "~M:LSPDPaperwork.LSPDPMainForm.BtnGenReleaseReport_Click(System.Object,System.EventArgs)")]
+[assembly: SuppressMessage("Globalization", "CA1303:Do not pass literals as localized parameters", Justification = "<Pending>", Scope = "member", Target = "~M:LSPDPaperwork.FormControllers.ImpoundReleaseReportController.GenReleaseReportMouseUp(System.Object,System.Windows.Forms.MouseEventArgs)")]

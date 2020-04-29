@@ -63,10 +63,14 @@
             System.Windows.Forms.Label label15;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label10;
+            System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+            System.Windows.Forms.Label label16;
+            System.Windows.Forms.TableLayoutPanel tblImpoundReport;
+            System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+            System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LSPDPMainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabArrestReport = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtMugshot = new System.Windows.Forms.TextBox();
             this.txtArrestingOfficers = new System.Windows.Forms.TextBox();
             this.txtSuspect = new System.Windows.Forms.TextBox();
@@ -80,10 +84,8 @@
             this.btnAttempted = new System.Windows.Forms.Button();
             this.btnAggravated = new System.Windows.Forms.Button();
             this.btnGovEmployee = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
             this.txtSuspPhone = new System.Windows.Forms.TextBox();
             this.tabImpoundReport = new System.Windows.Forms.TabPage();
-            this.tblImpoundReport = new System.Windows.Forms.TableLayoutPanel();
             this.txtReason = new System.Windows.Forms.TextBox();
             this.txtScreenshot = new System.Windows.Forms.TextBox();
             this.txtImpoundLocation = new System.Windows.Forms.TextBox();
@@ -98,7 +100,6 @@
             this.txtTimestamp = new System.Windows.Forms.TextBox();
             this.txtVehDetails = new System.Windows.Forms.TextBox();
             this.tabImpoundRelease = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtRelOfficer = new System.Windows.Forms.TextBox();
             this.txtRelColour = new System.Windows.Forms.TextBox();
             this.txtRelModel = new System.Windows.Forms.TextBox();
@@ -109,7 +110,6 @@
             this.txtRelFee = new System.Windows.Forms.TextBox();
             this.txtRelPhoneNum = new System.Windows.Forms.TextBox();
             this.tabDutyReport = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dtWatchStart = new System.Windows.Forms.DateTimePicker();
             this.btnGenDutyReport = new System.Windows.Forms.Button();
             this.txtNotes = new System.Windows.Forms.TextBox();
@@ -153,16 +153,21 @@
             label15 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            label16 = new System.Windows.Forms.Label();
+            tblImpoundReport = new System.Windows.Forms.TableLayoutPanel();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabArrestReport.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabImpoundReport.SuspendLayout();
-            this.tblImpoundReport.SuspendLayout();
+            tblImpoundReport.SuspendLayout();
             this.tabImpoundRelease.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             this.tabDutyReport.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).BeginInit();
             this.trayContextMenu.SuspendLayout();
@@ -568,7 +573,7 @@
             // 
             // tabArrestReport
             // 
-            this.tabArrestReport.Controls.Add(this.tableLayoutPanel2);
+            this.tabArrestReport.Controls.Add(tableLayoutPanel2);
             this.tabArrestReport.Location = new System.Drawing.Point(4, 22);
             this.tabArrestReport.Name = "tabArrestReport";
             this.tabArrestReport.Padding = new System.Windows.Forms.Padding(3);
@@ -579,40 +584,40 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.txtMugshot, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(label1, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(label4, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtArrestingOfficers, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(label5, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(label6, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(label7, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(label8, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtSuspect, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(label9, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.btnGenArrestReport, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.txtNarrative, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.chkLicensesRevoked, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.chkCrimes, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.txtSuspPhone, 1, 1);
-            this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(786, 444);
-            this.tableLayoutPanel2.TabIndex = 2;
+            tableLayoutPanel2.ColumnCount = 3;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel2.Controls.Add(this.txtMugshot, 1, 5);
+            tableLayoutPanel2.Controls.Add(label1, 0, 5);
+            tableLayoutPanel2.Controls.Add(label4, 0, 4);
+            tableLayoutPanel2.Controls.Add(this.txtArrestingOfficers, 1, 3);
+            tableLayoutPanel2.Controls.Add(label5, 0, 3);
+            tableLayoutPanel2.Controls.Add(label6, 0, 2);
+            tableLayoutPanel2.Controls.Add(label7, 0, 1);
+            tableLayoutPanel2.Controls.Add(label8, 0, 0);
+            tableLayoutPanel2.Controls.Add(this.txtSuspect, 1, 0);
+            tableLayoutPanel2.Controls.Add(label9, 0, 6);
+            tableLayoutPanel2.Controls.Add(this.btnGenArrestReport, 0, 7);
+            tableLayoutPanel2.Controls.Add(this.txtNarrative, 1, 6);
+            tableLayoutPanel2.Controls.Add(this.chkLicensesRevoked, 1, 2);
+            tableLayoutPanel2.Controls.Add(this.chkCrimes, 1, 4);
+            tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 4);
+            tableLayoutPanel2.Controls.Add(this.txtSuspPhone, 1, 1);
+            tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 8;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel2.Size = new System.Drawing.Size(786, 444);
+            tableLayoutPanel2.TabIndex = 2;
             // 
             // txtMugshot
             // 
@@ -639,24 +644,22 @@
             this.txtSuspect.Name = "txtSuspect";
             this.txtSuspect.Size = new System.Drawing.Size(331, 20);
             this.txtSuspect.TabIndex = 1;
-            this.txtSuspect.TextChanged += new System.EventHandler(this.Suspect_TextChanged);
             // 
             // btnGenArrestReport
             // 
             this.btnGenArrestReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.btnGenArrestReport, 3);
+            tableLayoutPanel2.SetColumnSpan(this.btnGenArrestReport, 3);
             this.btnGenArrestReport.Location = new System.Drawing.Point(3, 409);
             this.btnGenArrestReport.Name = "btnGenArrestReport";
             this.btnGenArrestReport.Size = new System.Drawing.Size(780, 23);
             this.btnGenArrestReport.TabIndex = 8;
             this.btnGenArrestReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenArrestReport.UseVisualStyleBackColor = true;
-            this.btnGenArrestReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenArrestReport_MouseUp);
             // 
             // txtNarrative
             // 
-            this.tableLayoutPanel2.SetColumnSpan(this.txtNarrative, 2);
+            tableLayoutPanel2.SetColumnSpan(this.txtNarrative, 2);
             this.txtNarrative.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtNarrative.Location = new System.Drawing.Point(108, 315);
             this.txtNarrative.Multiline = true;
@@ -697,7 +700,7 @@
             this.tableLayoutPanel3.Controls.Add(this.btnAttempted, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.btnAggravated, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.btnGovEmployee, 3, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label16, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(label16, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(445, 159);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -717,7 +720,6 @@
             this.txtSuggestCharge.Name = "txtSuggestCharge";
             this.txtSuggestCharge.Size = new System.Drawing.Size(329, 20);
             this.txtSuggestCharge.TabIndex = 1;
-            this.txtSuggestCharge.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSuggestCharge_KeyUp);
             // 
             // btnAccessory
             // 
@@ -729,7 +731,6 @@
             this.btnAccessory.TabStop = false;
             this.btnAccessory.Text = "Accessory";
             this.btnAccessory.UseVisualStyleBackColor = true;
-            this.btnAccessory.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // btnAttempted
             // 
@@ -740,7 +741,6 @@
             this.btnAttempted.TabStop = false;
             this.btnAttempted.Text = "Attempted";
             this.btnAttempted.UseVisualStyleBackColor = true;
-            this.btnAttempted.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // btnAggravated
             // 
@@ -752,7 +752,6 @@
             this.btnAggravated.TabStop = false;
             this.btnAggravated.Text = "Aggravated";
             this.btnAggravated.UseVisualStyleBackColor = true;
-            this.btnAggravated.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // btnGovEmployee
             // 
@@ -764,17 +763,16 @@
             this.btnGovEmployee.TabStop = false;
             this.btnGovEmployee.Text = "Gov. Employee";
             this.btnGovEmployee.UseVisualStyleBackColor = true;
-            this.btnGovEmployee.Click += new System.EventHandler(this.BtnChargeModifier_Click);
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.label16, 4);
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 13);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Crime Search Box:";
+            label16.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(label16, 4);
+            label16.Location = new System.Drawing.Point(3, 0);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(94, 13);
+            label16.TabIndex = 11;
+            label16.Text = "Crime Search Box:";
             // 
             // txtSuspPhone
             // 
@@ -785,12 +783,10 @@
             this.txtSuspPhone.Name = "txtSuspPhone";
             this.txtSuspPhone.Size = new System.Drawing.Size(331, 20);
             this.txtSuspPhone.TabIndex = 2;
-            this.txtSuspPhone.TextChanged += new System.EventHandler(this.Phone_TextChanged);
-            this.txtSuspPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSuspPhone_KeyPress);
             // 
             // tabImpoundReport
             // 
-            this.tabImpoundReport.Controls.Add(this.tblImpoundReport);
+            this.tabImpoundReport.Controls.Add(tblImpoundReport);
             this.tabImpoundReport.Location = new System.Drawing.Point(4, 22);
             this.tabImpoundReport.Name = "tabImpoundReport";
             this.tabImpoundReport.Padding = new System.Windows.Forms.Padding(3);
@@ -801,54 +797,54 @@
             // 
             // tblImpoundReport
             // 
-            this.tblImpoundReport.ColumnCount = 4;
-            this.tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tblImpoundReport.Controls.Add(this.txtReason, 1, 10);
-            this.tblImpoundReport.Controls.Add(lblImpoundReason, 0, 10);
-            this.tblImpoundReport.Controls.Add(this.txtScreenshot, 1, 8);
-            this.tblImpoundReport.Controls.Add(label2, 0, 8);
-            this.tblImpoundReport.Controls.Add(this.txtImpoundLocation, 1, 7);
-            this.tblImpoundReport.Controls.Add(lblLocation, 0, 7);
-            this.tblImpoundReport.Controls.Add(lblDateTime, 0, 6);
-            this.tblImpoundReport.Controls.Add(this.txtVehColour, 1, 4);
-            this.tblImpoundReport.Controls.Add(lblVehColour, 0, 4);
-            this.tblImpoundReport.Controls.Add(this.txtVehModel, 1, 3);
-            this.tblImpoundReport.Controls.Add(lblVehModel, 0, 3);
-            this.tblImpoundReport.Controls.Add(this.txtLicensePlate, 1, 2);
-            this.tblImpoundReport.Controls.Add(lblLicensePlate, 0, 2);
-            this.tblImpoundReport.Controls.Add(lblPhoneNum, 0, 1);
-            this.tblImpoundReport.Controls.Add(lblVehOwner, 0, 0);
-            this.tblImpoundReport.Controls.Add(this.txtVehOwner, 1, 0);
-            this.tblImpoundReport.Controls.Add(this.dtImpoundTime, 1, 6);
-            this.tblImpoundReport.Controls.Add(lblOfficersInvolved, 0, 9);
-            this.tblImpoundReport.Controls.Add(this.txtOfficersInvolved, 1, 9);
-            this.tblImpoundReport.Controls.Add(this.btnGenImpoundReport, 0, 11);
-            this.tblImpoundReport.Controls.Add(this.txtPhoneNumber, 1, 1);
-            this.tblImpoundReport.Controls.Add(label3, 2, 6);
-            this.tblImpoundReport.Controls.Add(this.txtTimestamp, 3, 6);
-            this.tblImpoundReport.Controls.Add(label10, 0, 5);
-            this.tblImpoundReport.Controls.Add(this.txtVehDetails, 1, 5);
-            this.tblImpoundReport.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tblImpoundReport.Location = new System.Drawing.Point(3, 3);
-            this.tblImpoundReport.Name = "tblImpoundReport";
-            this.tblImpoundReport.RowCount = 12;
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tblImpoundReport.Size = new System.Drawing.Size(786, 446);
-            this.tblImpoundReport.TabIndex = 0;
+            tblImpoundReport.ColumnCount = 4;
+            tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tblImpoundReport.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tblImpoundReport.Controls.Add(this.txtReason, 1, 10);
+            tblImpoundReport.Controls.Add(lblImpoundReason, 0, 10);
+            tblImpoundReport.Controls.Add(this.txtScreenshot, 1, 8);
+            tblImpoundReport.Controls.Add(label2, 0, 8);
+            tblImpoundReport.Controls.Add(this.txtImpoundLocation, 1, 7);
+            tblImpoundReport.Controls.Add(lblLocation, 0, 7);
+            tblImpoundReport.Controls.Add(lblDateTime, 0, 6);
+            tblImpoundReport.Controls.Add(this.txtVehColour, 1, 4);
+            tblImpoundReport.Controls.Add(lblVehColour, 0, 4);
+            tblImpoundReport.Controls.Add(this.txtVehModel, 1, 3);
+            tblImpoundReport.Controls.Add(lblVehModel, 0, 3);
+            tblImpoundReport.Controls.Add(this.txtLicensePlate, 1, 2);
+            tblImpoundReport.Controls.Add(lblLicensePlate, 0, 2);
+            tblImpoundReport.Controls.Add(lblPhoneNum, 0, 1);
+            tblImpoundReport.Controls.Add(lblVehOwner, 0, 0);
+            tblImpoundReport.Controls.Add(this.txtVehOwner, 1, 0);
+            tblImpoundReport.Controls.Add(this.dtImpoundTime, 1, 6);
+            tblImpoundReport.Controls.Add(lblOfficersInvolved, 0, 9);
+            tblImpoundReport.Controls.Add(this.txtOfficersInvolved, 1, 9);
+            tblImpoundReport.Controls.Add(this.btnGenImpoundReport, 0, 11);
+            tblImpoundReport.Controls.Add(this.txtPhoneNumber, 1, 1);
+            tblImpoundReport.Controls.Add(label3, 2, 6);
+            tblImpoundReport.Controls.Add(this.txtTimestamp, 3, 6);
+            tblImpoundReport.Controls.Add(label10, 0, 5);
+            tblImpoundReport.Controls.Add(this.txtVehDetails, 1, 5);
+            tblImpoundReport.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            tblImpoundReport.Location = new System.Drawing.Point(3, 3);
+            tblImpoundReport.Name = "tblImpoundReport";
+            tblImpoundReport.RowCount = 12;
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tblImpoundReport.Size = new System.Drawing.Size(786, 446);
+            tblImpoundReport.TabIndex = 0;
             // 
             // txtReason
             // 
@@ -904,7 +900,6 @@
             this.txtVehOwner.Name = "txtVehOwner";
             this.txtVehOwner.Size = new System.Drawing.Size(247, 20);
             this.txtVehOwner.TabIndex = 1;
-            this.txtVehOwner.TextChanged += new System.EventHandler(this.Suspect_TextChanged);
             // 
             // dtImpoundTime
             // 
@@ -928,14 +923,13 @@
             // btnGenImpoundReport
             // 
             this.btnGenImpoundReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblImpoundReport.SetColumnSpan(this.btnGenImpoundReport, 4);
+            tblImpoundReport.SetColumnSpan(this.btnGenImpoundReport, 4);
             this.btnGenImpoundReport.Location = new System.Drawing.Point(3, 410);
             this.btnGenImpoundReport.Name = "btnGenImpoundReport";
             this.btnGenImpoundReport.Size = new System.Drawing.Size(780, 23);
             this.btnGenImpoundReport.TabIndex = 11;
             this.btnGenImpoundReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenImpoundReport.UseVisualStyleBackColor = true;
-            this.btnGenImpoundReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenImpoundReport_MouseUp);
             // 
             // txtPhoneNumber
             // 
@@ -946,8 +940,6 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(247, 20);
             this.txtPhoneNumber.TabIndex = 2;
-            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.Phone_TextChanged);
-            this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSuspPhone_KeyPress);
             // 
             // txtTimestamp
             // 
@@ -955,8 +947,6 @@
             this.txtTimestamp.Name = "txtTimestamp";
             this.txtTimestamp.Size = new System.Drawing.Size(165, 20);
             this.txtTimestamp.TabIndex = 23;
-            this.txtTimestamp.TextChanged += new System.EventHandler(this.TxtTimestamp_TextChanged);
-            this.txtTimestamp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSuspPhone_KeyPress);
             // 
             // txtVehDetails
             // 
@@ -967,7 +957,7 @@
             // 
             // tabImpoundRelease
             // 
-            this.tabImpoundRelease.Controls.Add(this.tableLayoutPanel1);
+            this.tabImpoundRelease.Controls.Add(tableLayoutPanel1);
             this.tabImpoundRelease.Location = new System.Drawing.Point(4, 22);
             this.tabImpoundRelease.Name = "tabImpoundRelease";
             this.tabImpoundRelease.Size = new System.Drawing.Size(792, 449);
@@ -977,42 +967,42 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.txtRelOfficer, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(lblIrImpOfficer, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(lblIrImpDate, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtRelColour, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(lblIrColor, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtRelModel, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(lblIrModel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtRelLicense, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(lblIrLicense, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(lblIrPhone, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(lblIrvehOwner, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtRelVehOwner, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtRelDate, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(lblIrFee, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.btnGenReleaseReport, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.txtRelFee, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.txtRelPhoneNum, 1, 1);
-            this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 418);
-            this.tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.ColumnCount = 3;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel1.Controls.Add(this.txtRelOfficer, 1, 6);
+            tableLayoutPanel1.Controls.Add(lblIrImpOfficer, 0, 6);
+            tableLayoutPanel1.Controls.Add(lblIrImpDate, 0, 5);
+            tableLayoutPanel1.Controls.Add(this.txtRelColour, 1, 4);
+            tableLayoutPanel1.Controls.Add(lblIrColor, 0, 4);
+            tableLayoutPanel1.Controls.Add(this.txtRelModel, 1, 3);
+            tableLayoutPanel1.Controls.Add(lblIrModel, 0, 3);
+            tableLayoutPanel1.Controls.Add(this.txtRelLicense, 1, 2);
+            tableLayoutPanel1.Controls.Add(lblIrLicense, 0, 2);
+            tableLayoutPanel1.Controls.Add(lblIrPhone, 0, 1);
+            tableLayoutPanel1.Controls.Add(lblIrvehOwner, 0, 0);
+            tableLayoutPanel1.Controls.Add(this.txtRelVehOwner, 1, 0);
+            tableLayoutPanel1.Controls.Add(this.txtRelDate, 1, 5);
+            tableLayoutPanel1.Controls.Add(lblIrFee, 0, 7);
+            tableLayoutPanel1.Controls.Add(this.btnGenReleaseReport, 0, 8);
+            tableLayoutPanel1.Controls.Add(this.txtRelFee, 1, 7);
+            tableLayoutPanel1.Controls.Add(this.txtRelPhoneNum, 1, 1);
+            tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 9;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel1.Size = new System.Drawing.Size(786, 418);
+            tableLayoutPanel1.TabIndex = 1;
             // 
             // txtRelOfficer
             // 
@@ -1052,7 +1042,6 @@
             this.txtRelVehOwner.Name = "txtRelVehOwner";
             this.txtRelVehOwner.Size = new System.Drawing.Size(247, 20);
             this.txtRelVehOwner.TabIndex = 1;
-            this.txtRelVehOwner.TextChanged += new System.EventHandler(this.Suspect_TextChanged);
             // 
             // txtRelDate
             // 
@@ -1067,14 +1056,13 @@
             // 
             this.btnGenReleaseReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.btnGenReleaseReport, 3);
+            tableLayoutPanel1.SetColumnSpan(this.btnGenReleaseReport, 3);
             this.btnGenReleaseReport.Location = new System.Drawing.Point(3, 211);
             this.btnGenReleaseReport.Name = "btnGenReleaseReport";
             this.btnGenReleaseReport.Size = new System.Drawing.Size(780, 23);
             this.btnGenReleaseReport.TabIndex = 9;
             this.btnGenReleaseReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenReleaseReport.UseVisualStyleBackColor = true;
-            this.btnGenReleaseReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenReleaseReport_MouseUp);
             // 
             // txtRelFee
             // 
@@ -1082,7 +1070,6 @@
             this.txtRelFee.Name = "txtRelFee";
             this.txtRelFee.Size = new System.Drawing.Size(247, 20);
             this.txtRelFee.TabIndex = 8;
-            this.txtRelFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRelFee_KeyPress);
             // 
             // txtRelPhoneNum
             // 
@@ -1093,11 +1080,10 @@
             this.txtRelPhoneNum.Name = "txtRelPhoneNum";
             this.txtRelPhoneNum.Size = new System.Drawing.Size(247, 20);
             this.txtRelPhoneNum.TabIndex = 2;
-            this.txtRelPhoneNum.TextChanged += new System.EventHandler(this.Phone_TextChanged);
             // 
             // tabDutyReport
             // 
-            this.tabDutyReport.Controls.Add(this.tableLayoutPanel4);
+            this.tabDutyReport.Controls.Add(tableLayoutPanel4);
             this.tabDutyReport.Location = new System.Drawing.Point(4, 22);
             this.tabDutyReport.Name = "tabDutyReport";
             this.tabDutyReport.Padding = new System.Windows.Forms.Padding(3);
@@ -1108,32 +1094,32 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.Controls.Add(this.dtWatchStart, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(label11, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(label12, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(label13, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(label14, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(label15, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.btnGenDutyReport, 0, 5);
-            this.tableLayoutPanel4.Controls.Add(this.txtNotes, 1, 4);
-            this.tableLayoutPanel4.Controls.Add(this.dtWatchEnd, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.numArrests, 1, 2);
-            this.tableLayoutPanel4.Controls.Add(this.numCitations, 1, 3);
-            this.tableLayoutPanel4.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 6;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(786, 444);
-            this.tableLayoutPanel4.TabIndex = 3;
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel4.Controls.Add(this.dtWatchStart, 1, 0);
+            tableLayoutPanel4.Controls.Add(label11, 0, 3);
+            tableLayoutPanel4.Controls.Add(label12, 0, 2);
+            tableLayoutPanel4.Controls.Add(label13, 0, 1);
+            tableLayoutPanel4.Controls.Add(label14, 0, 0);
+            tableLayoutPanel4.Controls.Add(label15, 0, 4);
+            tableLayoutPanel4.Controls.Add(this.btnGenDutyReport, 0, 5);
+            tableLayoutPanel4.Controls.Add(this.txtNotes, 1, 4);
+            tableLayoutPanel4.Controls.Add(this.dtWatchEnd, 1, 1);
+            tableLayoutPanel4.Controls.Add(this.numArrests, 1, 2);
+            tableLayoutPanel4.Controls.Add(this.numCitations, 1, 3);
+            tableLayoutPanel4.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            tableLayoutPanel4.Location = new System.Drawing.Point(3, 2);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 6;
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel4.Size = new System.Drawing.Size(786, 444);
+            tableLayoutPanel4.TabIndex = 3;
             // 
             // dtWatchStart
             // 
@@ -1148,14 +1134,13 @@
             // 
             this.btnGenDutyReport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel4.SetColumnSpan(this.btnGenDutyReport, 2);
+            tableLayoutPanel4.SetColumnSpan(this.btnGenDutyReport, 2);
             this.btnGenDutyReport.Location = new System.Drawing.Point(3, 417);
             this.btnGenDutyReport.Name = "btnGenDutyReport";
             this.btnGenDutyReport.Size = new System.Drawing.Size(780, 23);
             this.btnGenDutyReport.TabIndex = 6;
             this.btnGenDutyReport.Text = "Generate Report on Clipboard (Right-click to clear form)";
             this.btnGenDutyReport.UseVisualStyleBackColor = true;
-            this.btnGenDutyReport.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnGenDutyReport_MouseUp);
             // 
             // txtNotes
             // 
@@ -1249,19 +1234,19 @@
             this.Text = "LSPD Paperwork";
             this.tabControl1.ResumeLayout(false);
             this.tabArrestReport.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tabImpoundReport.ResumeLayout(false);
-            this.tblImpoundReport.ResumeLayout(false);
-            this.tblImpoundReport.PerformLayout();
+            tblImpoundReport.ResumeLayout(false);
+            tblImpoundReport.PerformLayout();
             this.tabImpoundRelease.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             this.tabDutyReport.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).EndInit();
             this.trayContextMenu.ResumeLayout(false);
@@ -1275,7 +1260,6 @@
         private System.Windows.Forms.TabPage tabArrestReport;
         private System.Windows.Forms.TabPage tabImpoundReport;
         private System.Windows.Forms.TabPage tabImpoundRelease;
-        private System.Windows.Forms.TableLayoutPanel tblImpoundReport;
         private System.Windows.Forms.TextBox txtVehOwner;
         private System.Windows.Forms.TextBox txtVehModel;
         private System.Windows.Forms.TextBox txtLicensePlate;
@@ -1286,7 +1270,6 @@
         private System.Windows.Forms.TextBox txtOfficersInvolved;
         private System.Windows.Forms.TextBox txtReason;
         private System.Windows.Forms.Button btnGenImpoundReport;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox txtRelOfficer;
         private System.Windows.Forms.TextBox txtRelColour;
         private System.Windows.Forms.TextBox txtRelModel;
@@ -1295,7 +1278,6 @@
         private System.Windows.Forms.DateTimePicker txtRelDate;
         private System.Windows.Forms.Button btnGenReleaseReport;
         private System.Windows.Forms.TextBox txtRelFee;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox txtMugshot;
         private System.Windows.Forms.TextBox txtArrestingOfficers;
         private System.Windows.Forms.TextBox txtSuspect;
@@ -1313,7 +1295,6 @@
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.TextBox txtRelPhoneNum;
         private System.Windows.Forms.TabPage tabDutyReport;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.DateTimePicker dtWatchStart;
         private System.Windows.Forms.Button btnGenDutyReport;
         private System.Windows.Forms.TextBox txtNotes;
@@ -1322,7 +1303,6 @@
         private System.Windows.Forms.NumericUpDown numCitations;
         private System.Windows.Forms.TextBox txtTimestamp;
         private System.Windows.Forms.TextBox txtVehDetails;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NotifyIcon trayIcon;
         private System.Windows.Forms.ContextMenuStrip trayContextMenu;
         private System.Windows.Forms.ToolStripMenuItem trayMenuAOT;
