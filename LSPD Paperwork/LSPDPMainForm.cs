@@ -5,6 +5,7 @@ namespace LSPDPaperwork {
     public partial class LSPDPMainForm : Form {
         private readonly SuspectManager suspMgr = new SuspectManager();
         private readonly CrimeList crimeList = new CrimeList();
+        private readonly RejectionList rejList = new RejectionList();
         public LSPDPMainForm() {
             InitializeComponent();
 
@@ -78,6 +79,22 @@ namespace LSPDPaperwork {
                                          () => new DutyReporter(),
                                          typeof(DutyReporter),
                                          OfficerData.OfficerDRs);
+
+            var flControl = new FirearmLicenseController.Controls {
+                Name = txtApplicant,
+                PrevDenial = chkDeniedBefore,
+                IsFormB = chkIsFormB,
+                LastOffence = dtLastOffence,
+                DateOfBirth = dtDOB,
+                FormA = chkFormA,
+                FormB = chkFormB,
+                ActiveOffence = activeOffence,
+                Underage = lblUnderage,
+                NameUnderscored = btnNameUnderscore,
+                GenBkgndChk = btnGenBkgndChk,
+                GenReport = btnGenFirearmsVerdict,
+            };
+            _ = new FirearmLicenseController(flControl, typeof(FirearmLicenseReporter), typeof(BackgroundCheckReporter), rejList);
         }
 
         private void TrayContextMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {

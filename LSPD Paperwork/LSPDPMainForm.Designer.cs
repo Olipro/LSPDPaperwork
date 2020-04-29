@@ -63,11 +63,17 @@
             System.Windows.Forms.Label label15;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label10;
+            System.Windows.Forms.Label label17;
+            System.Windows.Forms.Label label18;
+            System.Windows.Forms.Label label19;
+            System.Windows.Forms.Label label23;
+            System.Windows.Forms.Label label20;
             System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
             System.Windows.Forms.Label label16;
             System.Windows.Forms.TableLayoutPanel tblImpoundReport;
             System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
             System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+            System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LSPDPMainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabArrestReport = new System.Windows.Forms.TabPage();
@@ -116,11 +122,24 @@
             this.dtWatchEnd = new System.Windows.Forms.DateTimePicker();
             this.numArrests = new System.Windows.Forms.NumericUpDown();
             this.numCitations = new System.Windows.Forms.NumericUpDown();
+            this.tabFirearms = new System.Windows.Forms.TabPage();
+            this.txtApplicant = new System.Windows.Forms.TextBox();
+            this.btnGenFirearmsVerdict = new System.Windows.Forms.Button();
+            this.dtDOB = new System.Windows.Forms.DateTimePicker();
+            this.chkFormA = new System.Windows.Forms.CheckedListBox();
+            this.chkFormB = new System.Windows.Forms.CheckedListBox();
+            this.activeOffence = new System.Windows.Forms.Label();
+            this.lblUnderage = new System.Windows.Forms.Label();
+            this.dtLastOffence = new System.Windows.Forms.DateTimePicker();
+            this.chkIsFormB = new System.Windows.Forms.CheckBox();
+            this.chkDeniedBefore = new System.Windows.Forms.CheckBox();
+            this.btnGenBkgndChk = new System.Windows.Forms.Button();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.trayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trayMenuAOT = new System.Windows.Forms.ToolStripMenuItem();
             this.trayContextMenuSep = new System.Windows.Forms.ToolStripSeparator();
             this.trayMenuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnNameUnderscore = new System.Windows.Forms.Button();
             lblImpoundReason = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             lblLocation = new System.Windows.Forms.Label();
@@ -153,11 +172,17 @@
             label15 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
+            label17 = new System.Windows.Forms.Label();
+            label18 = new System.Windows.Forms.Label();
+            label19 = new System.Windows.Forms.Label();
+            label23 = new System.Windows.Forms.Label();
+            label20 = new System.Windows.Forms.Label();
             tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             label16 = new System.Windows.Forms.Label();
             tblImpoundReport = new System.Windows.Forms.TableLayoutPanel();
             tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabArrestReport.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -170,6 +195,8 @@
             tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).BeginInit();
+            this.tabFirearms.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
             this.trayContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -557,12 +584,73 @@
             label10.Text = "Vehicle Details:";
             label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label17
+            // 
+            label17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label17.AutoSize = true;
+            label17.Location = new System.Drawing.Point(40, 133);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(43, 145);
+            label17.TabIndex = 15;
+            label17.Text = "Form A:";
+            label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label18.AutoSize = true;
+            label18.Location = new System.Drawing.Point(14, 107);
+            label18.Name = "label18";
+            label18.Size = new System.Drawing.Size(69, 26);
+            label18.TabIndex = 13;
+            label18.Text = "Date of Birth:";
+            label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label19.AutoSize = true;
+            label19.Location = new System.Drawing.Point(3, 81);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(80, 26);
+            label19.TabIndex = 11;
+            label19.Text = "Latest Offence:";
+            label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label23.AutoSize = true;
+            label23.Location = new System.Drawing.Point(29, 0);
+            label23.Name = "label23";
+            label23.Size = new System.Drawing.Size(54, 29);
+            label23.TabIndex = 0;
+            label23.Text = "Applicant:";
+            label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            label20.AutoSize = true;
+            label20.Location = new System.Drawing.Point(40, 278);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(43, 145);
+            label20.TabIndex = 15;
+            label20.Text = "Form B:";
+            label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabArrestReport);
             this.tabControl1.Controls.Add(this.tabImpoundReport);
             this.tabControl1.Controls.Add(this.tabImpoundRelease);
             this.tabControl1.Controls.Add(this.tabDutyReport);
+            this.tabControl1.Controls.Add(this.tabFirearms);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.MinimumSize = new System.Drawing.Size(800, 450);
@@ -1186,6 +1274,183 @@
             this.numCitations.Size = new System.Drawing.Size(120, 20);
             this.numCitations.TabIndex = 4;
             // 
+            // tabFirearms
+            // 
+            this.tabFirearms.Controls.Add(tableLayoutPanel5);
+            this.tabFirearms.Location = new System.Drawing.Point(4, 22);
+            this.tabFirearms.Name = "tabFirearms";
+            this.tabFirearms.Size = new System.Drawing.Size(792, 449);
+            this.tabFirearms.TabIndex = 4;
+            this.tabFirearms.Text = "Firearms Permit";
+            this.tabFirearms.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            tableLayoutPanel5.AutoSize = true;
+            tableLayoutPanel5.ColumnCount = 3;
+            tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            tableLayoutPanel5.Controls.Add(this.btnNameUnderscore, 2, 0);
+            tableLayoutPanel5.Controls.Add(label17, 0, 5);
+            tableLayoutPanel5.Controls.Add(label18, 0, 4);
+            tableLayoutPanel5.Controls.Add(label19, 0, 3);
+            tableLayoutPanel5.Controls.Add(label23, 0, 0);
+            tableLayoutPanel5.Controls.Add(this.txtApplicant, 1, 0);
+            tableLayoutPanel5.Controls.Add(this.btnGenFirearmsVerdict, 0, 7);
+            tableLayoutPanel5.Controls.Add(this.dtDOB, 1, 4);
+            tableLayoutPanel5.Controls.Add(this.chkFormA, 1, 5);
+            tableLayoutPanel5.Controls.Add(label20, 0, 6);
+            tableLayoutPanel5.Controls.Add(this.chkFormB, 1, 6);
+            tableLayoutPanel5.Controls.Add(this.activeOffence, 2, 3);
+            tableLayoutPanel5.Controls.Add(this.lblUnderage, 2, 4);
+            tableLayoutPanel5.Controls.Add(this.dtLastOffence, 1, 3);
+            tableLayoutPanel5.Controls.Add(this.chkIsFormB, 1, 2);
+            tableLayoutPanel5.Controls.Add(this.chkDeniedBefore, 1, 1);
+            tableLayoutPanel5.Controls.Add(this.btnGenBkgndChk, 2, 2);
+            tableLayoutPanel5.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
+            tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 8;
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            tableLayoutPanel5.Size = new System.Drawing.Size(786, 452);
+            tableLayoutPanel5.TabIndex = 2;
+            // 
+            // txtApplicant
+            // 
+            this.txtApplicant.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtApplicant.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtApplicant.Location = new System.Drawing.Point(89, 3);
+            this.txtApplicant.Name = "txtApplicant";
+            this.txtApplicant.Size = new System.Drawing.Size(424, 20);
+            this.txtApplicant.TabIndex = 1;
+            // 
+            // btnGenFirearmsVerdict
+            // 
+            this.btnGenFirearmsVerdict.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            tableLayoutPanel5.SetColumnSpan(this.btnGenFirearmsVerdict, 3);
+            this.btnGenFirearmsVerdict.Enabled = false;
+            this.btnGenFirearmsVerdict.Location = new System.Drawing.Point(3, 426);
+            this.btnGenFirearmsVerdict.Name = "btnGenFirearmsVerdict";
+            this.btnGenFirearmsVerdict.Size = new System.Drawing.Size(780, 23);
+            this.btnGenFirearmsVerdict.TabIndex = 9;
+            this.btnGenFirearmsVerdict.Text = "Generate Report on Clipboard (Right-click to clear form)";
+            this.btnGenFirearmsVerdict.UseVisualStyleBackColor = true;
+            // 
+            // dtDOB
+            // 
+            this.dtDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDOB.Location = new System.Drawing.Point(89, 110);
+            this.dtDOB.Name = "dtDOB";
+            this.dtDOB.Size = new System.Drawing.Size(424, 20);
+            this.dtDOB.TabIndex = 24;
+            // 
+            // chkFormA
+            // 
+            this.chkFormA.CheckOnClick = true;
+            this.chkFormA.ColumnWidth = 220;
+            this.chkFormA.FormattingEnabled = true;
+            this.chkFormA.HorizontalScrollbar = true;
+            this.chkFormA.Location = new System.Drawing.Point(89, 136);
+            this.chkFormA.Name = "chkFormA";
+            this.chkFormA.Size = new System.Drawing.Size(424, 139);
+            this.chkFormA.TabIndex = 25;
+            this.chkFormA.ThreeDCheckBoxes = true;
+            // 
+            // chkFormB
+            // 
+            this.chkFormB.CheckOnClick = true;
+            this.chkFormB.FormattingEnabled = true;
+            this.chkFormB.Location = new System.Drawing.Point(89, 281);
+            this.chkFormB.Name = "chkFormB";
+            this.chkFormB.Size = new System.Drawing.Size(424, 139);
+            this.chkFormB.TabIndex = 25;
+            // 
+            // activeOffence
+            // 
+            this.activeOffence.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.activeOffence.AutoSize = true;
+            this.activeOffence.BackColor = System.Drawing.Color.Red;
+            this.activeOffence.Location = new System.Drawing.Point(519, 81);
+            this.activeOffence.Name = "activeOffence";
+            this.activeOffence.Size = new System.Drawing.Size(68, 26);
+            this.activeOffence.TabIndex = 26;
+            this.activeOffence.Text = "INELIGIBLE!";
+            this.activeOffence.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.activeOffence.Visible = false;
+            // 
+            // lblUnderage
+            // 
+            this.lblUnderage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUnderage.AutoSize = true;
+            this.lblUnderage.BackColor = System.Drawing.Color.Red;
+            this.lblUnderage.Location = new System.Drawing.Point(519, 107);
+            this.lblUnderage.Name = "lblUnderage";
+            this.lblUnderage.Size = new System.Drawing.Size(57, 26);
+            this.lblUnderage.TabIndex = 27;
+            this.lblUnderage.Text = "Underage!";
+            this.lblUnderage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUnderage.Visible = false;
+            // 
+            // dtLastOffence
+            // 
+            this.dtLastOffence.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtLastOffence.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtLastOffence.Location = new System.Drawing.Point(89, 84);
+            this.dtLastOffence.Name = "dtLastOffence";
+            this.dtLastOffence.Size = new System.Drawing.Size(424, 20);
+            this.dtLastOffence.TabIndex = 23;
+            this.dtLastOffence.Value = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
+            // 
+            // chkIsFormB
+            // 
+            this.chkIsFormB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.chkIsFormB.AutoSize = true;
+            this.chkIsFormB.Location = new System.Drawing.Point(89, 55);
+            this.chkIsFormB.Name = "chkIsFormB";
+            this.chkIsFormB.Size = new System.Drawing.Size(65, 23);
+            this.chkIsFormB.TabIndex = 28;
+            this.chkIsFormB.Text = "Form B?";
+            this.chkIsFormB.UseVisualStyleBackColor = true;
+            // 
+            // chkDeniedBefore
+            // 
+            this.chkDeniedBefore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.chkDeniedBefore.AutoSize = true;
+            this.chkDeniedBefore.Location = new System.Drawing.Point(89, 32);
+            this.chkDeniedBefore.Name = "chkDeniedBefore";
+            this.chkDeniedBefore.Size = new System.Drawing.Size(137, 17);
+            this.chkDeniedBefore.TabIndex = 22;
+            this.chkDeniedBefore.Text = "Not Previously Denied?";
+            this.chkDeniedBefore.UseVisualStyleBackColor = true;
+            // 
+            // btnGenBkgndChk
+            // 
+            this.btnGenBkgndChk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnGenBkgndChk.AutoSize = true;
+            this.btnGenBkgndChk.Enabled = false;
+            this.btnGenBkgndChk.Location = new System.Drawing.Point(519, 55);
+            this.btnGenBkgndChk.Name = "btnGenBkgndChk";
+            this.btnGenBkgndChk.Size = new System.Drawing.Size(109, 23);
+            this.btnGenBkgndChk.TabIndex = 29;
+            this.btnGenBkgndChk.Text = "Background Check";
+            this.btnGenBkgndChk.UseVisualStyleBackColor = true;
+            // 
             // trayIcon
             // 
             this.trayIcon.ContextMenuStrip = this.trayContextMenu;
@@ -1221,6 +1486,19 @@
             this.trayMenuExit.Size = new System.Drawing.Size(151, 22);
             this.trayMenuExit.Text = "Exit";
             // 
+            // btnNameUnderscore
+            // 
+            this.btnNameUnderscore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNameUnderscore.AutoSize = true;
+            this.btnNameUnderscore.Enabled = false;
+            this.btnNameUnderscore.Location = new System.Drawing.Point(519, 3);
+            this.btnNameUnderscore.Name = "btnNameUnderscore";
+            this.btnNameUnderscore.Size = new System.Drawing.Size(109, 23);
+            this.btnNameUnderscore.TabIndex = 30;
+            this.btnNameUnderscore.Text = "Name With _";
+            this.btnNameUnderscore.UseVisualStyleBackColor = true;
+            // 
             // LSPDPMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1249,6 +1527,10 @@
             tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).EndInit();
+            this.tabFirearms.ResumeLayout(false);
+            this.tabFirearms.PerformLayout();
+            tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel5.PerformLayout();
             this.trayContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1308,6 +1590,19 @@
         private System.Windows.Forms.ToolStripMenuItem trayMenuAOT;
         private System.Windows.Forms.ToolStripSeparator trayContextMenuSep;
         private System.Windows.Forms.ToolStripMenuItem trayMenuExit;
+        private System.Windows.Forms.TabPage tabFirearms;
+        private System.Windows.Forms.TextBox txtApplicant;
+        private System.Windows.Forms.Button btnGenFirearmsVerdict;
+        private System.Windows.Forms.CheckBox chkDeniedBefore;
+        private System.Windows.Forms.DateTimePicker dtLastOffence;
+        private System.Windows.Forms.DateTimePicker dtDOB;
+        private System.Windows.Forms.CheckedListBox chkFormA;
+        private System.Windows.Forms.CheckedListBox chkFormB;
+        private System.Windows.Forms.Label activeOffence;
+        private System.Windows.Forms.Label lblUnderage;
+        private System.Windows.Forms.CheckBox chkIsFormB;
+        private System.Windows.Forms.Button btnGenBkgndChk;
+        private System.Windows.Forms.Button btnNameUnderscore;
     }
 }
 

@@ -1,0 +1,42 @@
+[img]https://i.imgur.com/88vzzHs.jpg[/img]
+[divbox=white]
+
+[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b][size=150]Los Santos Police Department[/size][/b]
+[size=115]Firearms and Licensing Division[/size]
+[size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
+
+[hr]
+[list=none]
+Gangs and Narcotics Division Detectives,
+
+Please complete a background check on __applicant__ to check for any gang affiliation you have on file. 
+Respond to this email with the code at the bottom after you have completed the background check.
+
+Regards,
+Firearms and Licensing Division.
+Los Santos Police Department
+[/list]
+
+[img]https://i.imgur.com/88vzzHs.jpg[/img]
+
+[code]
+[img]https://i.imgur.com/88vzzHs.jpg[/img]
+[divbox=white]
+
+[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b][size=150]Los Santos Police Department[/size][/b]
+[size=115]Firearms and Licensing Division[/size]
+[size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
+
+[hr]
+[list=none]
+Firearms and Licensing Division,
+
+__applicant__ has Failed/passed their background check. 
+
+Regards,
+Gangs and Narcotics Division
+Los Santos Police Department
+[/list]
+[/divbox]
+
+[img]https://i.imgur.com/88vzzHs.jpg[/img]

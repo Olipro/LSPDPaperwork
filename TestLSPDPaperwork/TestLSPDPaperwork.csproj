@@ -71,8 +71,11 @@
     <Compile Include="Fakes\FakeTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TestController\TestFirearmLicenseController.cs" />
+    <Compile Include="TestReporter\TestFirearmLicenseReporter.cs" />
     <Compile Include="TestController\TestArrestReportController.cs" />
     <Compile Include="TestReporter\TestArrestReporter.cs" />
+    <Compile Include="TestReporter\TestBackgroundCheckReporter.cs" />
     <Compile Include="TestCrime.cs" />
     <Compile Include="TestCrimeList.cs" />
     <Compile Include="TestController\TestDutyReportController.cs" />
@@ -81,6 +84,8 @@
     <Compile Include="TestReporter\TestImpoundReleaseReporter.cs" />
     <Compile Include="TestController\TestImpoundReportController.cs" />
     <Compile Include="TestReporter\TestImpoundReporter.cs" />
+    <Compile Include="TestRejection.cs" />
+    <Compile Include="TestRejectionList.cs" />
     <Compile Include="TestReportTemplateParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestSuspect.cs" />

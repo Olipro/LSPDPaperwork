@@ -129,6 +129,99 @@ namespace LSPDPaperwork.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+        ///[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+        ///[size=150]Los Santos Police Department[/size][/b]
+        ///[size=130]Firearms and Licensing Division[/size]
+        ///[size=115]Application Response[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///[hr]
+        ///[list=none][b][i]Dear __applicant__[/i][/b],
+        ///
+        ///Your application has been received and acknowledged by the Firearms Licensing Division, Los Sant [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FLDApproved {
+            get {
+                return ResourceManager.GetString("FLDApproved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+        ///[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+        ///[size=150]Los Santos Police Department[/size][/b]
+        ///[size=130]Firearms and Licensing Division[/size]
+        ///[size=115]Application Response[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///[hr]
+        ///[list=none][b][i]Dear __applicant[/i][/b],
+        ///
+        ///Your application has been received and acknowledged by the Firearms Licensing Division, Los Santos [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FLDBkgndChk {
+            get {
+                return ResourceManager.GetString("FLDBkgndChk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+        ///[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+        ///[size=150]Los Santos Police Department[/size][/b]
+        ///[size=130]Firearms and Licensing Division[/size]
+        ///[size=115]Application Response[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///[hr]
+        ///[list=none][b][i]Dear __applicant__[/i][/b],
+        ///
+        ///Your application has been received and acknowledged by the Firearms Licensing Division, Los Sant [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FLDIsOnHold {
+            get {
+                return ResourceManager.GetString("FLDIsOnHold", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+        ///[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+        ///[size=150]Los Santos Police Department[/size][/b]
+        ///[size=130]Firearms and Licensing Division[/size]
+        ///[size=115]Application Response[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///[hr]
+        ///[list=none][b][i]Dear __applicant__[/i][/b],
+        ///
+        ///Your application has been received and acknowledged by the Firearms Licensing Division, Los Sant [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FLDRejected {
+            get {
+                return ResourceManager.GetString("FLDRejected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [img]https://i.imgur.com/88vzzHs.jpg[/img]
+        ///[divbox=white]
+        ///
+        ///[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b][size=150]Los Santos Police Department[/size][/b]
+        ///[size=115]Firearms and Licensing Division[/size]
+        ///[size=95]&quot;TO PROTECT AND SERVE&quot;[/size][/font][/right][/aligntable]
+        ///
+        ///[hr]
+        ///[list=none]
+        ///Gangs and Narcotics Division Detectives,
+        ///
+        ///Please complete a background check on __applicant__ to check for any gang affiliation you have on file. 
+        ///Respond to this  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string FLDReqBkgndChk {
+            get {
+                return ResourceManager.GetString("FLDReqBkgndChk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to imgur.com
         ///gyazo.com
         ///cdn.discordapp.com
@@ -177,6 +270,20 @@ namespace LSPDPaperwork.Properties {
         internal static string ImpoundReport {
             get {
                 return ResourceManager.GetString("ImpoundReport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A__A1__Name not in MDC.__We are unable to verify your name. Please correct it.__0
+        ///A__A1__Name mismatch.__Your name does not match the other details provided. Please correct it.__0
+        ///A__A2__Age Missing__You did not state your age. Please correct it__0
+        ///A__A2__Underage__You are too young to possess a license ((Reapply with a proper age))__1
+        ///A__A3__Phone # missing__You did not provide us with your phone number. Please correct it.__0
+        ///A__A3__Phone # mismatch__We are unable to verify your phone number. Please c [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Rejections {
+            get {
+                return ResourceManager.GetString("Rejections", resourceCulture);
             }
         }
         

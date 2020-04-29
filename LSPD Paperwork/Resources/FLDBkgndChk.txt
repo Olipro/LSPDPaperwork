@@ -1,0 +1,20 @@
+[img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+[size=150]Los Santos Police Department[/size][/b]
+[size=130]Firearms and Licensing Division[/size]
+[size=115]Application Response[/size]
+[size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
+[hr]
+[list=none][b][i]Dear __applicant__[/i][/b],
+
+Your application has been received and acknowledged by the Firearms Licensing Division, Los Santos Police Department. As a FORM B applicant your application has been put on hold for upto 72 hours so a background check can be completed.
+
+You do not need to do anything, you will be informed via email weather your application is accepted or denied after the background check has been completed.
+
+[hr][/hr]
+From
+[img]__officerSig:__[/img]
+FLD Officer __officers:__
+Firearms Licensing Division,
+Los Santos Police Department[/list][/divbox]
+[img]https://i.imgur.com/88vzzHs.jpg[/img]

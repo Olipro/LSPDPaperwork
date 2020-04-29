@@ -1,0 +1,100 @@
+A__A1__Name not in MDC.__We are unable to verify your name. Please correct it.__0
+A__A1__Name mismatch.__Your name does not match the other details provided. Please correct it.__0
+A__A1__Name missing.__You have not provided your name. Please correct it.__0
+A__A2__Age Missing__You did not state your age. Please correct it__0
+A__A2__Underage__You are too young to possess a license ((Reapply with a proper age))__1
+A__A3__Phone # missing__You did not provide us with your phone number. Please correct it.__0
+A__A3__Phone # mismatch__We are unable to verify your phone number. Please correct it.__0
+A__A4__Address unanswered__You have not provided an address or stated that you don't have one. Please correct it.__0
+A__A5__Gender Unanswered__You did not state your gender.__0
+A__A6__Driver's License link broken__We are unable to verify your Driver's license. ((Fix the link))__0
+A__A6__Driver's License obscured__You have cropped too much of the image, we cannot see your name.__0
+A__A6__No Driver's License__You are not in possession of a Driver's license. Please obtain one from the DMV and update the proof.__0
+A__A7__Crime unanswered__You did not answer whether or not you have committed any crimes.__0
+A__A7__No Crimes on record__You have not, in fact, committed any crimes. Please fix your answer to reflect this.__0
+A__A7__Is a criminal - PERM__You have committed a crime which makes you permanently ineligible for a license.__3
+A__A7__Is a criminal - TEMP__You have committed a crime less than 12 months ((3 months)) ago.__2
+A__A7__Is a criminal - MISD__You have an outstanding misdemeanour. Please hand yourself in to serve it and re-apply.__1
+A__A8__Missing crime explanation__Your explanation for having committed a crime is missing.__0
+A__A8__Unsatisfactory crime explanation__Your explanation for having committed a crime is insufficient__0
+A__A9__Missing reason for requesting license__You have not provided a reason for wanting a firearms license__0
+A__A9__Unsatisfactory reason for requesting license__You have not provided a legally permissible reason for wanting a firearms license__0
+A__B1__Missing weapons to own__You have not stated which weapons you intend to purchase.__0
+A__B1__Invalid weapons to own__You have requested a license for weapons which are not on the [url=https://gov.eclipse-rp.net/viewtopic.php?f=556&t=8623]Roster[/url]__0
+A__B2__Missing gun storage info__You have not specified where you will store your firearms__0
+A__B2__Unsatisfactory gun storage info__You have not provided a legally permissible explanation of where you will be storing your guns__0
+A__C1__Wrong answer__Your answer is incorrect__1
+A__C2__Wrong answer__Your answer is incorrect__1
+A__C3__Wrong answer__Your answer is incorrect__1
+A__C4__Wrong answer__Your answer is incorrect__1
+A__C5__Wrong answer__Your answer is incorrect__1
+A__C6__Wrong answer__Your answer is incorrect__1
+A__C7__Wrong answer__Your answer is incorrect__1
+A__C8__Wrong answer__Your answer is incorrect__1
+A__C9__Wrong answer__Your answer is incorrect__1
+A__C1__Missing answer__Your answer is missing__0
+A__C2__Missing answer__Your answer is missing__0
+A__C3__Missing answer__Your answer is missing__0
+A__C4__Missing answer__Your answer is missing__0
+A__C5__Missing answer__Your answer is missing__0
+A__C6__Missing answer__Your answer is missing__0
+A__C7__Missing answer__Your answer is missing__0
+A__C8__Missing answer__Your answer is missing__0
+A__C9__Missing answer__Your answer is missing__0
+A__D1__Stats missing or unviewable__((Please fix the link to your /stats))__0
+A__D1__Stats obscured__((Please ensure the picture of your /stats includes your name))__0
+A__D2__Panel info missing or unviewable__((Please fix the link to the screenshot of your admin panel))__0
+A__D3__Metagaming unanswered__((You have not answered the question))__0
+A__D3__Metagaming answered NO__((You answered No to agreeing with server rules. As a result, we will not be issuing you with a license.))__3
+A__D4__Suspension unanswered__((You have not answered the question))__0
+A__D5__Suspension unexplained__((You have not explained why one of your characters had a license suspension))__0
+A__D5__Suspension explanation unsatisfactory__((You have not provided a satisfactory explanation as to why one of your characters had their license suspended))__1
+A__OTHER__Agreement unsigned__You have not correctly signed the "Rules and Restrictions" section. Please correct it.__0
+A__OTHER__Non-Conformant__Your application does not conform to the provided template format. Please correct it.__0
+A__OTHER__Previously Denied - WAIT__You have previously been denied. You are currently ineligible. Continued filing of applications without waiting may result in suspension from eligibility for a longer period of time.__1
+A__OTHER__Didn't Respond__You did not make the changes within the required timeframe__1
+A__OTHER__Permanently Ineligible__You are permanently ineligible for a license.__3
+B__A1__Name not in MDC.__We are unable to verify your name. Please correct it.__0
+B__A1__Name mismatch.__Your name does not match the other details provided. Please correct it.__0
+B__A2__Age Missing__You did not state your age. Please correct it__0
+B__A2__Underage__You are too young to possess a license ((Reapply with a proper age))__1
+B__A3__Phone # missing__You did not provide us with your phone number. Please correct it.__0
+B__A3__Phone # mismatch__We are unable to verify your phone number. Please correct it.__0
+B__A4__Address unanswered__You have not provided an address or stated that you don't have one. Please correct it.__0
+B__A5__Gender Unanswered__You did not state your gender.__0
+B__A6__Driver's License link broken__We are unable to verify your Driver's license. ((Fix the link))__0
+B__A6__No Driver's License__You are not in possession of a Driver's license. Please obtain one from the DMV and update the proof.__0
+B__A6__Driver's License obscured__You have cropped too much of the image, we cannot see your name.__0
+B__A7__Loss of License Unanswered__You have not explained how you lost your license. Please correct it.__0
+B__A8__Recent convictions unanswered__You have not answered whether or not you have outstanding convictions.__0
+B__A8__Has recent convictions__You do in fact have convictions rendering you ineligible. Please reapply when they have expired.__2
+B__A8__Has fatal convictions__You do in fact have convictions rendering you permanently ineligible.__3
+B__B1__Missing weapons to own__You have not stated which weapons you intend to purchase.__0
+B__B1__Invalid weapons to own__You have requested a license for weapons which are not on the [url=https://gov.eclipse-rp.net/viewtopic.php?f=556&t=8623]Roster[/url]__0
+B__B2__Missing gun storage info__You have not specified where you will store your firearms__0
+B__B2__Unsatisfactory gun storage info__You have not provided a legally permissible explanation of where you will be storing your guns__0
+B__C1__Wrong answer__Your answer is incorrect__1
+B__C2__Wrong answer__Your answer is incorrect__1
+B__C3__Wrong answer__Your answer is incorrect__1
+B__C4__Wrong answer__Your answer is incorrect__1
+B__C5__Wrong answer__Your answer is incorrect__1
+B__C6__Wrong answer__Your answer is incorrect__1
+B__C7__Wrong answer__Your answer is incorrect__1
+B__C8__Wrong answer__Your answer is incorrect__1
+B__C9__Wrong answer__Your answer is incorrect__1
+B__C1__Missing answer__Your answer is missing__0
+B__C2__Missing answer__Your answer is missing__0
+B__C3__Missing answer__Your answer is missing__0
+B__C4__Missing answer__Your answer is missing__0
+B__C5__Missing answer__Your answer is missing__0
+B__C6__Missing answer__Your answer is missing__0
+B__C7__Missing answer__Your answer is missing__0
+B__C8__Missing answer__Your answer is missing__0
+B__C9__Missing answer__Your answer is missing__0
+B__D1__Stats missing or unviewable__((Please fix the link to your /stats))__0
+B__D1__Stats obscured__((Please ensure the picture of your /stats includes your name))__0
+B__OTHER__Agreement unsigned__You have not correctly signed the "Rules and Restrictions" section. Please correct it.__0
+B__OTHER__Non-Conformant__Your application does not conform to the provided template format. Please correct it.__0
+B__OTHER__Previously Denied - WAIT__You have previously been denied. You are currently ineligible. Continued filing of applications without waiting may result in suspension from eligibility for a longer period of time.__1
+B__OTHER__Didn't Respond__You did not make the changes within the required timeframe__1
+B__OTHER__Permanently Ineligible__You are permanently ineligible for a license.__2

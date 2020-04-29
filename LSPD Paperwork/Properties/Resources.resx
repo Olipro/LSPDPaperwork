@@ -127,6 +127,21 @@
   <data name="DutyReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DutyReport.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="FLDApproved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FLDApproved.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="FLDBkgndChk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FLDBkgndChk.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="FLDIsOnHold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FLDIsOnHold.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="FLDRejected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FLDRejected.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="FLDReqBkgndChk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FLDReqBkgndChk.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="ImgServices" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgServices.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
@@ -135,6 +150,9 @@
   </data>
   <data name="ImpoundReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImpoundReport.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Rejections" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rejections.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Vehicles" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vehicles.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>

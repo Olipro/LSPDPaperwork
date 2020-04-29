@@ -1,0 +1,23 @@
+﻿[img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+[size=150]Los Santos Police Department[/size][/b]
+[size=130]Firearms and Licensing Division[/size]
+[size=115]Application Response[/size]
+[size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
+[hr]
+[list=none][b][i]Dear __applicant__[/i][/b],
+
+Your application has been received and acknowledged by the Firearms Licensing Division, Los Santos Police Department. Following a thorough stage of review and examination, we've decided to put your application on-hold pending minor amendments on your application format. Please review the reasons below and amend them within 48 hours.
+
+[list]
+__reasons__[/list]
+
+[b][i]Once again, please amend these errors before __date__ or your application will be denied.[/i][/b]
+
+[hr][/hr]
+From
+[img]__officerSig:__[/img]
+FLD Officer __officers:__
+Firearms Licensing Division,
+Los Santos Police Department[/list][/divbox]
+[img]https://i.imgur.com/88vzzHs.jpg[/img]

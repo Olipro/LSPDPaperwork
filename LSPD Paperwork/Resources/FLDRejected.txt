@@ -1,0 +1,23 @@
+﻿[img]https://i.imgur.com/88vzzHs.jpg[/img][divbox=white]
+[img]https://i.imgur.com/UYd15I0.png[/img][aligntable=right,0,0,0,0,0,0][right][font=Arial][b]
+[size=150]Los Santos Police Department[/size][/b]
+[size=130]Firearms and Licensing Division[/size]
+[size=115]Application Response[/size]
+[size=95]"TO PROTECT AND SERVE"[/size][/font][/right][/aligntable]
+[hr]
+[list=none][b][i]Dear __applicant__[/i][/b],
+
+Your application has been received and acknowledged by the Firearms Licensing Division, Los Santos Police Department. Following a thorough stage of preliminary review and examination, the application has been denied as it has failed to meet basic requirements. The reason(s) for this decision can be found below:
+
+[list]
+__reasons__[/list]
+
+[i][b]__reapply__[/b][/i]
+
+[hr][/hr]
+From
+[img]__officerSig:__[/img]
+FLD Officer __officers:__
+Firearms Licensing Division,
+Los Santos Police Department[/list][/divbox]
+[img]https://i.imgur.com/88vzzHs.jpg[/img]

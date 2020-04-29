@@ -82,12 +82,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IRejection.cs" />
+    <Compile Include="Interface\IRejectionList.cs" />
     <Compile Include="OfficerData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OfficerData.Designer.cs">
       <DependentUpon>OfficerData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reporter\BackgroundCheckReporter.cs" />
+    <Compile Include="FormControllers\FirearmLicenseController.cs" />
+    <Compile Include="Rejection.cs" />
+    <Compile Include="RejectionList.cs" />
     <Compile Include="Reporter\ArrestReporter.cs" />
     <Compile Include="ClipboardMonitor.cs" />
     <Compile Include="Crime.cs" />
@@ -101,6 +107,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Interface\ICrime.cs" />
     <Compile Include="Interface\ICrimeList.cs" />
+    <Compile Include="Reporter\FirearmLicenseReporter.cs" />
     <Compile Include="Reporter\ImpoundReleaseReporter.cs" />
     <Compile Include="Interface\IReporter.cs" />
     <Compile Include="Interface\IReportTemplateParser.cs" />
@@ -154,6 +161,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LSPD.ico" />
+    <Content Include="Resources\FLDApproved.txt" />
+    <None Include="Resources\FLDBkgndChk.txt" />
+    <Content Include="Resources\FLDIsOnHold.txt" />
+    <Content Include="Resources\FLDRejected.txt" />
+    <None Include="Resources\FLDReqBkgndChk.txt" />
+    <Content Include="Resources\Rejections.txt" />
     <None Include="Resources\Vehicles.txt" />
     <None Include="Resources\ImpoundReport.txt" />
     <None Include="Resources\ImpoundRelease.txt" />
