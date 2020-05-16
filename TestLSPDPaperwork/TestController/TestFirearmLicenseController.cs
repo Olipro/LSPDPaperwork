@@ -144,6 +144,9 @@ namespace TestLSPDPaperwork {
 
         [TestMethod]
         public void FirearmLicenseControllerCorrectlyCopiesNameWithUnderscore() {
+            mockRejList.SetupGet(f => f.FormA).Returns(new HashSet<IRejection>());
+            mockRejList.SetupGet(f => f.FormB).Returns(new HashSet<IRejection>());
+            var ctrlr = new FirearmLicenseController(ctrls, typeof(FakeReporter), typeof(FakeReporter), mockRejList.Object);
             ctrls.Name.Text = "Peter Jones";
             ctrls.NameUnderscored.PerformClick();
             Assert.AreEqual("Peter_Jones", Clipboard.GetText());
