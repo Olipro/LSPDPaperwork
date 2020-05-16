@@ -1257,6 +1257,18 @@
             tableLayoutPanel5.Size = new System.Drawing.Size(786, 452);
             tableLayoutPanel5.TabIndex = 2;
             // 
+            // btnNameUnderscore
+            // 
+            this.btnNameUnderscore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNameUnderscore.AutoSize = true;
+            this.btnNameUnderscore.Location = new System.Drawing.Point(519, 3);
+            this.btnNameUnderscore.Name = "btnNameUnderscore";
+            this.btnNameUnderscore.Size = new System.Drawing.Size(109, 23);
+            this.btnNameUnderscore.TabIndex = 30;
+            this.btnNameUnderscore.Text = "Name With _";
+            this.btnNameUnderscore.UseVisualStyleBackColor = true;
+            // 
             // txtApplicant
             // 
             this.txtApplicant.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -1485,19 +1497,6 @@
             this.trayMenuExit.Name = "trayMenuExit";
             this.trayMenuExit.Size = new System.Drawing.Size(151, 22);
             this.trayMenuExit.Text = "Exit";
-            // 
-            // btnNameUnderscore
-            // 
-            this.btnNameUnderscore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNameUnderscore.AutoSize = true;
-            this.btnNameUnderscore.Enabled = false;
-            this.btnNameUnderscore.Location = new System.Drawing.Point(519, 3);
-            this.btnNameUnderscore.Name = "btnNameUnderscore";
-            this.btnNameUnderscore.Size = new System.Drawing.Size(109, 23);
-            this.btnNameUnderscore.TabIndex = 30;
-            this.btnNameUnderscore.Text = "Name With _";
-            this.btnNameUnderscore.UseVisualStyleBackColor = true;
             // 
             // LSPDPMainForm
             // 
