@@ -75,8 +75,6 @@
             System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
             System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LSPDPMainForm));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabArrestReport = new System.Windows.Forms.TabPage();
             this.txtMugshot = new System.Windows.Forms.TextBox();
             this.txtArrestingOfficers = new System.Windows.Forms.TextBox();
             this.txtSuspect = new System.Windows.Forms.TextBox();
@@ -91,7 +89,6 @@
             this.btnAggravated = new System.Windows.Forms.Button();
             this.btnGovEmployee = new System.Windows.Forms.Button();
             this.txtSuspPhone = new System.Windows.Forms.TextBox();
-            this.tabImpoundReport = new System.Windows.Forms.TabPage();
             this.txtReason = new System.Windows.Forms.TextBox();
             this.txtScreenshot = new System.Windows.Forms.TextBox();
             this.txtImpoundLocation = new System.Windows.Forms.TextBox();
@@ -105,7 +102,6 @@
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtTimestamp = new System.Windows.Forms.TextBox();
             this.txtVehDetails = new System.Windows.Forms.TextBox();
-            this.tabImpoundRelease = new System.Windows.Forms.TabPage();
             this.txtRelOfficer = new System.Windows.Forms.TextBox();
             this.txtRelColour = new System.Windows.Forms.TextBox();
             this.txtRelModel = new System.Windows.Forms.TextBox();
@@ -115,14 +111,12 @@
             this.btnGenReleaseReport = new System.Windows.Forms.Button();
             this.txtRelFee = new System.Windows.Forms.TextBox();
             this.txtRelPhoneNum = new System.Windows.Forms.TextBox();
-            this.tabDutyReport = new System.Windows.Forms.TabPage();
             this.dtWatchStart = new System.Windows.Forms.DateTimePicker();
             this.btnGenDutyReport = new System.Windows.Forms.Button();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.dtWatchEnd = new System.Windows.Forms.DateTimePicker();
             this.numArrests = new System.Windows.Forms.NumericUpDown();
             this.numCitations = new System.Windows.Forms.NumericUpDown();
-            this.tabFirearms = new System.Windows.Forms.TabPage();
             this.txtApplicant = new System.Windows.Forms.TextBox();
             this.btnGenFirearmsVerdict = new System.Windows.Forms.Button();
             this.dtDOB = new System.Windows.Forms.DateTimePicker();
@@ -134,6 +128,12 @@
             this.chkIsFormB = new System.Windows.Forms.CheckBox();
             this.chkDeniedBefore = new System.Windows.Forms.CheckBox();
             this.btnGenBkgndChk = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabArrestReport = new System.Windows.Forms.TabPage();
+            this.tabImpoundReport = new System.Windows.Forms.TabPage();
+            this.tabImpoundRelease = new System.Windows.Forms.TabPage();
+            this.tabDutyReport = new System.Windows.Forms.TabPage();
+            this.tabFirearms = new System.Windows.Forms.TabPage();
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.trayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.trayMenuAOT = new System.Windows.Forms.ToolStripMenuItem();
@@ -183,20 +183,20 @@
             tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabControl1.SuspendLayout();
-            this.tabArrestReport.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tabImpoundReport.SuspendLayout();
             tblImpoundReport.SuspendLayout();
-            this.tabImpoundRelease.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            this.tabDutyReport.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).BeginInit();
-            this.tabFirearms.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabArrestReport.SuspendLayout();
+            this.tabImpoundReport.SuspendLayout();
+            this.tabImpoundRelease.SuspendLayout();
+            this.tabDutyReport.SuspendLayout();
+            this.tabFirearms.SuspendLayout();
             this.trayContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -644,32 +644,6 @@
             label20.Text = "Form B:";
             label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabArrestReport);
-            this.tabControl1.Controls.Add(this.tabImpoundReport);
-            this.tabControl1.Controls.Add(this.tabImpoundRelease);
-            this.tabControl1.Controls.Add(this.tabDutyReport);
-            this.tabControl1.Controls.Add(this.tabFirearms);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.MinimumSize = new System.Drawing.Size(800, 450);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(800, 475);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabArrestReport
-            // 
-            this.tabArrestReport.Controls.Add(tableLayoutPanel2);
-            this.tabArrestReport.Location = new System.Drawing.Point(4, 22);
-            this.tabArrestReport.Name = "tabArrestReport";
-            this.tabArrestReport.Padding = new System.Windows.Forms.Padding(3);
-            this.tabArrestReport.Size = new System.Drawing.Size(792, 449);
-            this.tabArrestReport.TabIndex = 0;
-            this.tabArrestReport.Text = "Arrest Report";
-            this.tabArrestReport.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.ColumnCount = 3;
@@ -872,17 +846,6 @@
             this.txtSuspPhone.Size = new System.Drawing.Size(331, 20);
             this.txtSuspPhone.TabIndex = 2;
             // 
-            // tabImpoundReport
-            // 
-            this.tabImpoundReport.Controls.Add(tblImpoundReport);
-            this.tabImpoundReport.Location = new System.Drawing.Point(4, 22);
-            this.tabImpoundReport.Name = "tabImpoundReport";
-            this.tabImpoundReport.Padding = new System.Windows.Forms.Padding(3);
-            this.tabImpoundReport.Size = new System.Drawing.Size(792, 449);
-            this.tabImpoundReport.TabIndex = 1;
-            this.tabImpoundReport.Text = "Impound Report";
-            this.tabImpoundReport.UseVisualStyleBackColor = true;
-            // 
             // tblImpoundReport
             // 
             tblImpoundReport.ColumnCount = 4;
@@ -1043,16 +1006,6 @@
             this.txtVehDetails.Size = new System.Drawing.Size(247, 20);
             this.txtVehDetails.TabIndex = 6;
             // 
-            // tabImpoundRelease
-            // 
-            this.tabImpoundRelease.Controls.Add(tableLayoutPanel1);
-            this.tabImpoundRelease.Location = new System.Drawing.Point(4, 22);
-            this.tabImpoundRelease.Name = "tabImpoundRelease";
-            this.tabImpoundRelease.Size = new System.Drawing.Size(792, 449);
-            this.tabImpoundRelease.TabIndex = 2;
-            this.tabImpoundRelease.Text = "Impound Release Report";
-            this.tabImpoundRelease.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 3;
@@ -1169,17 +1122,6 @@
             this.txtRelPhoneNum.Size = new System.Drawing.Size(247, 20);
             this.txtRelPhoneNum.TabIndex = 2;
             // 
-            // tabDutyReport
-            // 
-            this.tabDutyReport.Controls.Add(tableLayoutPanel4);
-            this.tabDutyReport.Location = new System.Drawing.Point(4, 22);
-            this.tabDutyReport.Name = "tabDutyReport";
-            this.tabDutyReport.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDutyReport.Size = new System.Drawing.Size(792, 449);
-            this.tabDutyReport.TabIndex = 3;
-            this.tabDutyReport.Text = "Duty Report";
-            this.tabDutyReport.UseVisualStyleBackColor = true;
-            // 
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.ColumnCount = 2;
@@ -1273,16 +1215,6 @@
             this.numCitations.Name = "numCitations";
             this.numCitations.Size = new System.Drawing.Size(120, 20);
             this.numCitations.TabIndex = 4;
-            // 
-            // tabFirearms
-            // 
-            this.tabFirearms.Controls.Add(tableLayoutPanel5);
-            this.tabFirearms.Location = new System.Drawing.Point(4, 22);
-            this.tabFirearms.Name = "tabFirearms";
-            this.tabFirearms.Size = new System.Drawing.Size(792, 449);
-            this.tabFirearms.TabIndex = 4;
-            this.tabFirearms.Text = "Firearms Permit";
-            this.tabFirearms.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
@@ -1451,6 +1383,74 @@
             this.btnGenBkgndChk.Text = "Background Check";
             this.btnGenBkgndChk.UseVisualStyleBackColor = true;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabArrestReport);
+            this.tabControl1.Controls.Add(this.tabImpoundReport);
+            this.tabControl1.Controls.Add(this.tabImpoundRelease);
+            this.tabControl1.Controls.Add(this.tabDutyReport);
+            this.tabControl1.Controls.Add(this.tabFirearms);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.MinimumSize = new System.Drawing.Size(800, 450);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 475);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabArrestReport
+            // 
+            this.tabArrestReport.Controls.Add(tableLayoutPanel2);
+            this.tabArrestReport.Location = new System.Drawing.Point(4, 22);
+            this.tabArrestReport.Name = "tabArrestReport";
+            this.tabArrestReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tabArrestReport.Size = new System.Drawing.Size(792, 449);
+            this.tabArrestReport.TabIndex = 0;
+            this.tabArrestReport.Text = "Arrest Report";
+            this.tabArrestReport.UseVisualStyleBackColor = true;
+            // 
+            // tabImpoundReport
+            // 
+            this.tabImpoundReport.Controls.Add(tblImpoundReport);
+            this.tabImpoundReport.Location = new System.Drawing.Point(4, 22);
+            this.tabImpoundReport.Name = "tabImpoundReport";
+            this.tabImpoundReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tabImpoundReport.Size = new System.Drawing.Size(792, 449);
+            this.tabImpoundReport.TabIndex = 1;
+            this.tabImpoundReport.Text = "Impound Report";
+            this.tabImpoundReport.UseVisualStyleBackColor = true;
+            // 
+            // tabImpoundRelease
+            // 
+            this.tabImpoundRelease.Controls.Add(tableLayoutPanel1);
+            this.tabImpoundRelease.Location = new System.Drawing.Point(4, 22);
+            this.tabImpoundRelease.Name = "tabImpoundRelease";
+            this.tabImpoundRelease.Size = new System.Drawing.Size(792, 449);
+            this.tabImpoundRelease.TabIndex = 2;
+            this.tabImpoundRelease.Text = "Impound Release Report";
+            this.tabImpoundRelease.UseVisualStyleBackColor = true;
+            // 
+            // tabDutyReport
+            // 
+            this.tabDutyReport.Controls.Add(tableLayoutPanel4);
+            this.tabDutyReport.Location = new System.Drawing.Point(4, 22);
+            this.tabDutyReport.Name = "tabDutyReport";
+            this.tabDutyReport.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDutyReport.Size = new System.Drawing.Size(792, 449);
+            this.tabDutyReport.TabIndex = 3;
+            this.tabDutyReport.Text = "Duty Report";
+            this.tabDutyReport.UseVisualStyleBackColor = true;
+            // 
+            // tabFirearms
+            // 
+            this.tabFirearms.Controls.Add(tableLayoutPanel5);
+            this.tabFirearms.Location = new System.Drawing.Point(4, 22);
+            this.tabFirearms.Name = "tabFirearms";
+            this.tabFirearms.Size = new System.Drawing.Size(792, 449);
+            this.tabFirearms.TabIndex = 4;
+            this.tabFirearms.Text = "Firearms Permit";
+            this.tabFirearms.UseVisualStyleBackColor = true;
+            // 
             // trayIcon
             // 
             this.trayIcon.ContextMenuStrip = this.trayContextMenu;
@@ -1510,27 +1510,27 @@
             this.MaximizeBox = false;
             this.Name = "LSPDPMainForm";
             this.Text = "LSPD Paperwork";
-            this.tabControl1.ResumeLayout(false);
-            this.tabArrestReport.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tabImpoundReport.ResumeLayout(false);
             tblImpoundReport.ResumeLayout(false);
             tblImpoundReport.PerformLayout();
-            this.tabImpoundRelease.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            this.tabDutyReport.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numArrests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCitations)).EndInit();
-            this.tabFirearms.ResumeLayout(false);
-            this.tabFirearms.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel5.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabArrestReport.ResumeLayout(false);
+            this.tabImpoundReport.ResumeLayout(false);
+            this.tabImpoundRelease.ResumeLayout(false);
+            this.tabDutyReport.ResumeLayout(false);
+            this.tabFirearms.ResumeLayout(false);
+            this.tabFirearms.PerformLayout();
             this.trayContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
